@@ -3,8 +3,10 @@ from sqlalchemy.orm import Session
 from app.database.config import get_db
 from app.models.dataset import Dataset, DatasetProfile
 from pydantic import BaseModel
+from typing import Optional, List, Dict, Any
 from app.agents.graph import agent_executor
 import json
+import traceback
 
 router = APIRouter()
 
@@ -15,11 +17,11 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     response: str
     agent_used: str
-    code_generated: str = None
-    sql_generated: str = None
-    analysis_results: list = None
-    errors: list = None
-    evaluation: dict = None
+    code_generated: Optional[str] = None
+    sql_generated: Optional[str] = None
+    analysis_results: Optional[List[Any]] = None
+    errors: Optional[List[str]] = None
+    evaluation: Optional[Dict[str, Any]] = None
 
 @router.post("/", response_model=ChatResponse)
 async def chat_with_data(req: ChatRequest, db: Session = Depends(get_db)):
@@ -57,7 +59,7 @@ async def chat_with_data(req: ChatRequest, db: Session = Depends(get_db)):
         
         return ChatResponse(
             response=final_state.get("final_response") or "No response generated.",
-            agent_used=final_state.get("agent_used", "Unknown"),
+            agent_used=final_state.get("agent_used") or "Unknown",
             code_generated=final_state.get("generated_code"),
             sql_generated=final_state.get("generated_sql"),
             analysis_results=final_state.get("analysis_results") if isinstance(final_state.get("analysis_results"), list) else None,
@@ -65,4 +67,6 @@ async def chat_with_data(req: ChatRequest, db: Session = Depends(get_db)):
             evaluation=final_state.get("evaluation")
         )
     except Exception as e:
+        print("ERROR IN GRAPH EXECUTION:")
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
