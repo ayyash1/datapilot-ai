@@ -73,3 +73,9 @@ graph TD
 ```bash
 docker-compose up --build
 ```
+
+## Vercel Deployment
+
+Import the repository as a single Vercel project and leave its **Root Directory** at the repository root (`./`). Do not create separate Vercel projects rooted at `frontend/` and `backend/`; the root `vercel.json` defines both services and routes `/api/*` to FastAPI and all other paths to Vite.
+
+Vercel Services access must be enabled for the account or team. If the Services configuration is not recognized, check Services availability before changing the project root or creating another project.
