@@ -1,4 +1,5 @@
 import os
+import tempfile
 import uuid
 import shutil
 import pandas as pd
@@ -11,7 +12,10 @@ from app.services.profiler import DataProfiler
 
 router = APIRouter()
 
-UPLOAD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../data/uploads"))
+if os.getenv("VERCEL"):
+    UPLOAD_DIR = os.path.join(tempfile.gettempdir(), "datapilot-uploads")
+else:
+    UPLOAD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../data/uploads"))
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 def process_dataset_profile(dataset_id: int, file_path: str, db: Session):

@@ -74,13 +74,25 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
       };
 
       xhr.onload = () => {
-        if (xhr.status === 200) {
-          const response = JSON.parse(xhr.responseText);
+        let response: { id?: number; detail?: string } | null = null;
+        try {
+          response = JSON.parse(xhr.responseText);
+        } catch {
+          response = null;
+        }
+
+        if (xhr.status >= 200 && xhr.status < 300 && typeof response?.id === 'number') {
           setStatus('success');
           onUploadSuccess(response.id);
         } else {
           setStatus('error');
-          setErrorMsg(JSON.parse(xhr.responseText).detail || 'Upload failed');
+          const responseText = xhr.responseText.trim().slice(0, 300);
+          setErrorMsg(
+            response?.detail ||
+              (xhr.status >= 200 && xhr.status < 300
+                ? 'The server response did not include a dataset ID.'
+                : `Upload failed (HTTP ${xhr.status}). ${responseText || 'The server returned no details.'}`)
+          );
         }
       };
 
