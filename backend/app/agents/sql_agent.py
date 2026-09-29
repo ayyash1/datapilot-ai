@@ -14,8 +14,6 @@ def sql_analyst_agent(state: AgentState) -> AgentState:
     if state["agent_used"] != "sql_analyst":
         return state
         
-    llm = LLMProvider.get_llm(temperature=0).with_structured_output(SQLGeneration)
-    
     prompt = ChatPromptTemplate.from_messages([
         ("system", "You are the SQL Analyst Agent. Your job is to generate a DuckDB SQL query to answer the user's question.\n"
                    "The dataset is loaded into a table named 'dataset'.\n"
@@ -26,11 +24,14 @@ def sql_analyst_agent(state: AgentState) -> AgentState:
         ("human", "User query: {user_query}")
     ])
     
-    chain = prompt | llm
-    
     try:
         schema_str = json.dumps(state.get("schema_info", {}))
-        result = chain.invoke({"schema_info": schema_str, "user_query": state["user_query"]})
+        result = LLMProvider.invoke_with_fallback(
+            SQLGeneration,
+            prompt=prompt,
+            values={"schema_info": schema_str, "user_query": state["user_query"]},
+            temperature=0,
+        )
         
         sql_query = result.sql_query
         

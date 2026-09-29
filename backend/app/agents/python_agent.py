@@ -3,6 +3,7 @@ from app.agents.llm_provider import LLMProvider
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 import pandas as pd
+import numpy as np
 import json
 import traceback
 
@@ -14,24 +15,25 @@ def python_analyst_agent(state: AgentState) -> AgentState:
     if state["agent_used"] != "python_analyst":
         return state
         
-    llm = LLMProvider.get_llm(temperature=0.1).with_structured_output(PythonGeneration)
-    
     prompt = ChatPromptTemplate.from_messages([
         ("system", "You are the Python Analyst Agent. Generate Python code using pandas to analyze a dataset.\n"
                    "Rules:\n"
                    "- The code MUST define a function named `analyze` that takes a pandas DataFrame `df` as input.\n"
                    "- The function MUST return a list of dictionaries (e.g. `return df.to_dict(orient='records')`) or a single dictionary.\n"
-                   "- Do not include any imports outside the function if they are malicious, standard pandas is available as `pd`.\n"
+                   "- Do not include any imports outside the function if they are malicious, standard pandas is available as `pd` and NumPy as `np`.\n"
                    "- Do not read or write files.\n"
                    "- Dataset Schema: {schema_info}"),
         ("human", "User query: {user_query}")
     ])
     
-    chain = prompt | llm
-    
     try:
         schema_str = json.dumps(state.get("schema_info", {}))
-        result = chain.invoke({"schema_info": schema_str, "user_query": state["user_query"]})
+        result = LLMProvider.invoke_with_fallback(
+            PythonGeneration,
+            prompt=prompt,
+            values={"schema_info": schema_str, "user_query": state["user_query"]},
+            temperature=0.1,
+        )
         
         python_code = result.python_code
         state["generated_code"] = python_code
@@ -44,9 +46,9 @@ def python_analyst_agent(state: AgentState) -> AgentState:
             df = pd.read_excel(file_path)
             
         # Secure execution environment
-        local_env = {"pd": pd}
+        local_env = {"pd": pd, "np": np}
         # Execute definition
-        exec(python_code, {"pd": pd}, local_env)
+        exec(python_code, {"pd": pd, "np": np}, local_env)
         
         if "analyze" not in local_env:
             raise ValueError("The generated code did not define an `analyze` function.")

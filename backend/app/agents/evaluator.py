@@ -12,8 +12,6 @@ class EvaluationMetrics(BaseModel):
 class EvaluatorAgent:
     @staticmethod
     def evaluate_response(user_query: str, analysis_results: Any, final_response: str) -> Dict[str, Any]:
-        llm = LLMProvider.get_llm(temperature=0).with_structured_output(EvaluationMetrics)
-        
         prompt = f"""
         You are an Evaluation AI. Grade the final response provided by the AI Data Analyst.
         User Query: {user_query}
@@ -23,7 +21,11 @@ class EvaluatorAgent:
         Provide scores for accuracy, groundedness, and hallucination.
         """
         try:
-            result = llm.invoke(prompt)
+            result = LLMProvider.invoke_with_fallback(
+                EvaluationMetrics,
+                prompt_text=prompt,
+                temperature=0,
+            )
             return result.model_dump()
         except Exception as e:
             return {"error": str(e)}
