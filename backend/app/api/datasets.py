@@ -1,7 +1,8 @@
 import os
 import uuid
 import shutil
-from fastapi import APIRouter, UploadFile, File, Depends, HTTPException, BackgroundTasks
+import pandas as pd
+from fastapi import APIRouter, UploadFile, File, Depends, HTTPException, BackgroundTasks, Query
 from sqlalchemy.orm import Session
 from app.database.config import get_db
 from app.models.dataset import Dataset, DatasetProfile
@@ -73,3 +74,43 @@ def get_dataset_profile(dataset_id: int, db: Session = Depends(get_db)):
     if not profile:
         raise HTTPException(status_code=404, detail="Profile not found or still processing")
     return profile
+
+@router.get("/{dataset_id}/data")
+def get_dataset_data(
+    dataset_id: int, 
+    page: int = Query(1, ge=1), 
+    limit: int = Query(50, ge=1, le=1000),
+    db: Session = Depends(get_db)
+):
+    dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+    if not dataset:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    
+    if not os.path.exists(dataset.file_path):
+        raise HTTPException(status_code=404, detail="Dataset file not found on disk")
+        
+    try:
+        if dataset.file_path.endswith('.csv'):
+            df = pd.read_csv(dataset.file_path)
+        else:
+            df = pd.read_excel(dataset.file_path)
+            
+        # Clean up NaN values which JSON cannot serialize
+        df = df.fillna("")
+        
+        total_rows = len(df)
+        start_idx = (page - 1) * limit
+        end_idx = start_idx + limit
+        
+        paginated_df = df.iloc[start_idx:end_idx]
+        
+        return {
+            "data": paginated_df.to_dict(orient="records"),
+            "total_rows": total_rows,
+            "page": page,
+            "limit": limit,
+            "total_pages": (total_rows + limit - 1) // limit
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading dataset: {str(e)}")
+
