@@ -64,7 +64,7 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
 
     try {
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:8000/api/datasets/upload', true);
+      xhr.open('POST', '/api/datasets/upload', true);
       
       xhr.upload.onprogress = (e) => {
         if (e.lengthComputable) {

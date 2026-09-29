@@ -47,7 +47,11 @@ def sql_analyst_agent(state: AgentState) -> AgentState:
         
         # Load data based on file type
         if file_path.endswith('.csv'):
-            con.execute(f"CREATE TABLE dataset AS SELECT * FROM read_csv_auto('{file_path}')")
+            try:
+                con.execute(f"CREATE TABLE dataset AS SELECT * FROM read_csv_auto('{file_path}')")
+            except Exception:
+                df = pd.read_csv(file_path)
+                con.register('dataset', df)
         elif file_path.endswith('.xlsx'):
             # DuckDB doesn't natively read excel well without extensions, use pandas for simplicity
             df = pd.read_excel(file_path)

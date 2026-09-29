@@ -1,11 +1,119 @@
 @import 'tailwindcss';
 
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 212 92% 43%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 94%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 90%;
+    --input: 214.3 31.8% 90%;
+    --ring: 212 92% 43%;
+
+    --radius: 0.75rem;
+
+    /* Power BI Curated Chart Palettes */
+    --chart-1: #0078D4; /* Power BI Azure */
+    --chart-2: #10B981; /* Emerald Teal */
+    --chart-3: #F59E0B; /* Sunset Amber */
+    --chart-4: #8B5CF6; /* Royal Violet */
+    --chart-5: #F43F5E; /* Coral Rose */
+    --chart-6: #06B6D4; /* Cyan Sky */
+    --chart-7: #EC4899; /* Hot Pink */
+    --chart-8: #3B82F6; /* Blue Ribbon */
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 6.5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71% 6.5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 16%;
+    --input: 217.2 32.6% 16%;
+    --ring: 224.3 76.3% 48%;
+
+    /* Dark Mode Power BI Palettes */
+    --chart-1: #38BDF8; /* Bright Sky */
+    --chart-2: #34D399; /* Mint Emerald */
+    --chart-3: #FBBF24; /* Warm Gold */
+    --chart-4: #A78BFA; /* Soft Violet */
+    --chart-5: #FB7185; /* Flamingo Rose */
+    --chart-6: #22D3EE; /* Electric Cyan */
+    --chart-7: #F472B6; /* Vibrant Pink */
+    --chart-8: #60A5FA; /* Pastel Blue */
+  }
+}
+
 @layer utilities {
   .animate-fade-in {
-    animation: fade-in 0.6s ease-out forwards;
+    animation: fade-in 0.4s ease-out forwards;
   }
   .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out forwards;
+    animation: fade-in-up 0.4s ease-out forwards;
+  }
+  .animate-draw {
+    animation: draw 1.2s ease-out forwards;
+  }
+
+  .glass-card {
+    background: rgba(var(--card), 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
   }
 }
 
@@ -17,7 +125,7 @@
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
