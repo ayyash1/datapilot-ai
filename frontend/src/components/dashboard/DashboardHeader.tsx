@@ -1,4 +1,4 @@
-import { Moon, Sun, Database, LayoutDashboard, BarChart2, Table2, ShieldCheck, Sparkles, SlidersHorizontal, Download, FileSpreadsheet } from "lucide-react";
+import { Moon, Sun, LayoutDashboard, BarChart2, Table2, ShieldCheck, Sparkles, SlidersHorizontal, FileSpreadsheet } from "lucide-react";
 import { useTheme } from "../theme-provider";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +28,7 @@ export function DashboardHeader({
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 shadow-2xs">
+    <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/90 backdrop-blur-xl supports-[backdrop-filter]:bg-background/75 shadow-sm">
       <div className="flex h-14 items-center justify-between px-4 sm:px-6 gap-3">
         {/* Left: Branding & Dataset Pill */}
         <div className="flex items-center gap-3">
@@ -39,7 +39,7 @@ export function DashboardHeader({
             </div>
             <span className="tracking-tight">
               <span className="text-primary font-black">DataPilot</span>{' '}
-              <span className="font-extrabold text-foreground">BI</span>
+              <span className="font-extrabold text-foreground">AI</span>
             </span>
           </div>
 
@@ -67,13 +67,13 @@ export function DashboardHeader({
         </div>
 
         {/* Center: Power BI View Mode Navigation Tabs */}
-        <div className="flex items-center bg-muted/60 p-1 rounded-xl border border-border/70 text-xs shadow-2xs">
+        <div className="flex items-center bg-card/70 p-1 rounded-xl border border-border/70 text-xs shadow-sm">
           <button
             type="button"
             onClick={() => onTabChange('overview')}
             className={`flex items-center gap-1.5 px-3 py-1 rounded-lg font-semibold transition-all ${
               activeTab === 'overview'
-                ? 'bg-background shadow-xs text-primary font-bold'
+                ? 'bg-primary/10 text-primary ring-1 ring-primary/20 font-bold'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -86,7 +86,7 @@ export function DashboardHeader({
             onClick={() => onTabChange('visuals')}
             className={`flex items-center gap-1.5 px-3 py-1 rounded-lg font-semibold transition-all ${
               activeTab === 'visuals'
-                ? 'bg-background shadow-xs text-primary font-bold'
+                ? 'bg-primary/10 text-primary ring-1 ring-primary/20 font-bold'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -99,7 +99,7 @@ export function DashboardHeader({
             onClick={() => onTabChange('matrix')}
             className={`flex items-center gap-1.5 px-3 py-1 rounded-lg font-semibold transition-all ${
               activeTab === 'matrix'
-                ? 'bg-background shadow-xs text-primary font-bold'
+                ? 'bg-primary/10 text-primary ring-1 ring-primary/20 font-bold'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -112,7 +112,7 @@ export function DashboardHeader({
             onClick={() => onTabChange('health')}
             className={`flex items-center gap-1.5 px-3 py-1 rounded-lg font-semibold transition-all ${
               activeTab === 'health'
-                ? 'bg-background shadow-xs text-primary font-bold'
+                ? 'bg-primary/10 text-primary ring-1 ring-primary/20 font-bold'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -148,7 +148,7 @@ export function DashboardHeader({
             }`}
             title="Toggle AI Analyst Copilot"
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">AI Copilot</span>
           </Button>
 

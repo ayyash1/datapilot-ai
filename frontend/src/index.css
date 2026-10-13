@@ -1,5 +1,36 @@
 @import 'tailwindcss';
 
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;
@@ -44,43 +75,60 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 210 40% 98%;
+    color-scheme: dark;
+    --background: 222 47% 7%;
+    --foreground: 210 40% 96%;
 
-    --card: 224 71% 6.5%;
-    --card-foreground: 210 40% 98%;
+    --card: 221 39% 10%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 224 71% 6.5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 221 39% 11%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 174 72% 44%;
+    --primary-foreground: 222 47% 8%;
 
-    --secondary: 217.2 32.6% 14%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 30% 15%;
+    --secondary-foreground: 210 40% 96%;
 
-    --muted: 217.2 32.6% 12%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 29% 14%;
+    --muted-foreground: 216 18% 66%;
 
-    --accent: 217.2 32.6% 15%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 220 29% 17%;
+    --accent-foreground: 210 40% 96%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 65% 48%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 16%;
-    --input: 217.2 32.6% 16%;
-    --ring: 224.3 76.3% 48%;
+    --border: 220 24% 19%;
+    --input: 220 24% 19%;
+    --ring: 174 72% 44%;
 
-    /* Dark Mode Power BI Palettes */
-    --chart-1: #38BDF8; /* Bright Sky */
-    --chart-2: #34D399; /* Mint Emerald */
-    --chart-3: #FBBF24; /* Warm Gold */
-    --chart-4: #A78BFA; /* Soft Violet */
-    --chart-5: #FB7185; /* Flamingo Rose */
-    --chart-6: #22D3EE; /* Electric Cyan */
-    --chart-7: #F472B6; /* Vibrant Pink */
-    --chart-8: #60A5FA; /* Pastel Blue */
+    --chart-1: #2dd4bf;
+    --chart-2: #60a5fa;
+    --chart-3: #fbbf24;
+    --chart-4: #a78bfa;
+    --chart-5: #fb7185;
+    --chart-6: #22d3ee;
+    --chart-7: #f472b6;
+    --chart-8: #a3e635;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    min-width: 360px;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "ss01" on, "cv11" on;
+  }
+
+  .dark {
+    color-scheme: dark;
   }
 }
 
@@ -99,6 +147,13 @@
     background: rgba(var(--card), 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dashboard-shell {
+    background-image:
+      radial-gradient(ellipse at 12% 0%, hsl(var(--primary) / 0.08), transparent 34rem),
+      radial-gradient(ellipse at 88% 12%, hsl(217 91% 60% / 0.055), transparent 38rem);
+    background-attachment: fixed;
   }
 
   .custom-scrollbar::-webkit-scrollbar {

@@ -38,7 +38,11 @@ graph TD
 - **Multi-Agent Chat:** Ask natural language questions and let the Supervisor agent route your query to the Python or SQL Analyst.
 - **Deterministic Computation:** Uses DuckDB and Pandas for 100% accurate mathematical analysis.
 - **Self-Evaluating AI:** The Evaluation Agent scores every response for accuracy, groundedness, and hallucination probability.
-- **Interactive Dashboards:** Automatically generated Recharts visualizations based on your dataset schema.
+- **Decision-Oriented Dashboards:** KPI aggregation is selected by metric meaning (for example, revenue is totaled while age and temperature are averaged). Business datasets can surface pricing/discount and profit-margin comparisons, segment profitability, time trends, and concise decision signals rather than unrelated metric pairings.
+
+## Sample Dataset
+
+Use [retail_transactions.csv](./data/retail_transactions.csv) to explore the dashboard with a fictional retail scenario covering 606 transactions across 2024–2025. It includes revenue, costs, profit, discount levels, product categories, regions, and customer/order details. Missing values, a few out-of-range values, and duplicate transactions are intentionally included; the current profiler scores it at approximately **80% data quality**.
 
 ## Tech Stack
 - **Frontend:** React, Vite, TypeScript, Tailwind CSS v4, shadcn/ui, Recharts

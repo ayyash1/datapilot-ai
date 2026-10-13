@@ -149,32 +149,33 @@ export function KPIGrid({ profile }: { profile: any }) {
   if (!profile) return null;
 
   const summaryKpis = profile.profile_data?.summary_kpis || [];
-  const palette = ['#0078D4', '#10B981', '#8B5CF6', '#F59E0B'];
+  const palette = ['#0078D4', '#10B981', '#8B5CF6'];
 
-  // If backend provided enriched summary KPIs
   if (summaryKpis.length > 0) {
     return (
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {summaryKpis.map((kpi: any, idx: number) => {
           const prefix = kpi.is_currency ? '$' : '';
           const formattedVal = `${prefix}${
-            kpi.sum >= 1000000
-              ? `${(kpi.sum / 1000000).toFixed(2)}M`
-              : kpi.sum >= 1000
-              ? `${(kpi.sum / 1000).toFixed(1)}k`
-              : kpi.sum.toLocaleString()
+            Math.abs(kpi.value) >= 1000000
+              ? `${(kpi.value / 1000000).toFixed(2)}M`
+              : Math.abs(kpi.value) >= 1000
+              ? `${(kpi.value / 1000).toFixed(1)}k`
+              : kpi.value.toLocaleString()
           }`;
 
           return (
             <KPICard
               key={kpi.id || idx}
-              title={`Total ${kpi.title}`}
+              title={`${kpi.aggregation} ${kpi.title}`}
               value={formattedVal}
-              trend={kpi.trend}
-              delta={kpi.delta_pct}
-              subtext="Period Trend"
+              trend={kpi.delta_pct == null ? undefined : kpi.trend}
+              delta={kpi.delta_pct ?? undefined}
+              subtext={kpi.delta_pct === undefined || kpi.delta_pct === null
+                ? `${kpi.count.toLocaleString()} valid records`
+                : 'Period-over-period'}
               sparkline={kpi.sparkline}
-              benchmark={`Peak: ${prefix}${kpi.max.toLocaleString()} | Avg: ${prefix}${kpi.avg.toLocaleString()}`}
+              benchmark={`${kpi.count.toLocaleString()} valid values`}
               icon={kpi.is_currency ? DollarSign : Layers}
               accentColor={palette[idx % palette.length]}
             />
@@ -185,10 +186,7 @@ export function KPIGrid({ profile }: { profile: any }) {
         <KPICard
           title="Data Health Score"
           value={`${profile.data_quality_score}%`}
-          trend={profile.data_quality_score >= 80 ? 'up' : 'down'}
-          delta={profile.data_quality_score >= 80 ? 98 : 45}
           subtext={profile.data_quality_score >= 80 ? 'Clean & Reliable' : 'Needs Cleansing'}
-          sparkline={[85, 90, 88, 92, 95, 98, profile.data_quality_score]}
           benchmark={`${profile.row_count.toLocaleString()} rows • ${profile.col_count} cols`}
           icon={Activity}
           accentColor="#06B6D4"
@@ -205,7 +203,6 @@ export function KPIGrid({ profile }: { profile: any }) {
         value={profile.row_count.toLocaleString()}
         icon={Database}
         subtext="Dataset Volume"
-        sparkline={[20, 35, 45, 60, 75, 90, profile.row_count]}
         accentColor="#0078D4"
       />
       <KPICard
@@ -219,10 +216,7 @@ export function KPIGrid({ profile }: { profile: any }) {
         title="Data Quality"
         value={`${profile.data_quality_score}%`}
         icon={Activity}
-        trend={profile.data_quality_score >= 80 ? 'up' : 'down'}
-        delta={profile.data_quality_score >= 80 ? 98 : 45}
         subtext={profile.data_quality_score >= 80 ? 'Healthy dataset' : 'Needs cleaning'}
-        sparkline={[80, 85, 90, 95, 98, 100, profile.data_quality_score]}
         accentColor="#10B981"
       />
       <KPICard

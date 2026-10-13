@@ -7,8 +7,6 @@ import { AnalyticsGrid } from './AnalyticsGrid';
 import { DataExplorer } from './DataExplorer';
 import { DataQualityCard } from './DataQualityCard';
 import { AIAnalystPanel } from './AIAnalystPanel';
-import { LayoutDashboard, Sparkles, SlidersHorizontal, Table2, ShieldCheck, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface DashboardLayoutProps {
   datasetId: number;
@@ -25,7 +23,7 @@ export function DashboardLayout({
 }: DashboardLayoutProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'visuals' | 'matrix' | 'health'>('overview');
   const [showSlicers, setShowSlicers] = useState(true);
-  const [showAIPanel, setShowAIPanel] = useState(true);
+  const [showAIPanel, setShowAIPanel] = useState(false);
   const [activeFilters, setActiveFilters] = useState<Record<string, string>>({});
   const [aggregationMode, setAggregationMode] = useState<'sum' | 'avg' | 'count'>('sum');
   const [aiQuery, setAiQuery] = useState('');
@@ -55,7 +53,7 @@ export function DashboardLayout({
   const activeFilterValue = Object.values(activeFilters)[0] || null;
 
   return (
-    <div className="min-h-screen bg-background font-sans antialiased text-foreground flex flex-col selection:bg-primary/20">
+    <div className="dashboard-shell min-h-screen bg-background font-sans antialiased text-foreground flex flex-col selection:bg-primary/20">
       {/* Top Application Header */}
       <DashboardHeader
         datasetName={datasetName}
@@ -91,11 +89,14 @@ export function DashboardLayout({
               <div className="space-y-6 animate-fade-in">
                 {/* Executive Title & Context */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <div>
+                  <div className="space-y-1.5">
+                    <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/90">
+                      Decision workspace
+                    </div>
                     <h2 className="text-xl sm:text-2xl font-black tracking-tight text-foreground">
                       Executive Analytics Dashboard
                     </h2>
-                    <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                       Synthesized performance indicators, automated smart narratives, and multi-dimensional visual models.
                     </p>
                   </div>
@@ -113,9 +114,14 @@ export function DashboardLayout({
                 {/* Power BI Visuals Canvas */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-bold text-foreground tracking-tight">
-                      Visual Models & Distribution Analytics
-                    </h3>
+                    <div>
+                      <h3 className="text-sm font-bold text-foreground tracking-tight">
+                        Performance drivers
+                      </h3>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        Trends, profitability, and pricing signals to guide your next decision.
+                      </p>
+                    </div>
                   </div>
                   <AnalyticsGrid
                     profile={profile}
