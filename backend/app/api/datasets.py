@@ -77,6 +77,22 @@ def get_dataset_profile(dataset_id: int, db: Session = Depends(get_db)):
     profile = db.query(DatasetProfile).filter(DatasetProfile.dataset_id == dataset_id).first()
     if not profile:
         raise HTTPException(status_code=404, detail="Profile not found or still processing")
+
+    profile_data = profile.profile_data or {}
+    if profile_data.get("analytics_version", 0) < DataProfiler.ANALYTICS_VERSION:
+        dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+        if dataset and os.path.exists(dataset.file_path):
+            try:
+                refreshed = DataProfiler.profile_dataset(dataset.file_path)
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=f"Error refreshing dataset profile: {str(e)}")
+
+            profile.row_count = refreshed["row_count"]
+            profile.col_count = refreshed["col_count"]
+            profile.data_quality_score = refreshed["data_quality_score"]
+            profile.profile_data = refreshed["profile_data"]
+            db.commit()
+
     return profile
 
 @router.get("/{dataset_id}/data")
@@ -117,4 +133,3 @@ def get_dataset_data(
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error reading dataset: {str(e)}")
-

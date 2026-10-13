@@ -37,13 +37,25 @@ interface PowerBIChartCardProps {
     name_key?: string;
     total_sum?: number;
     available_metrics?: string[];
+    is_currency?: boolean;
+    metric_currency?: Record<string, boolean>;
+    metric_aggregations?: Record<string, string>;
+    metric_labels?: Record<string, string>;
+    insight?: string;
   };
   onAskAI: (chartContext: string) => void;
   activeFilter?: string | null;
 }
 
 // Custom formatted tooltip
-function PowerBITooltip({ active, payload, label }: any) {
+function PowerBITooltip({
+  active,
+  payload,
+  label,
+  isCurrency = false,
+  isPercent = false,
+  metricLabels = {}
+}: any) {
   if (!active || !payload || !payload.length) return null;
 
   return (
@@ -64,8 +76,7 @@ function PowerBITooltip({ active, payload, label }: any) {
               : entry.value
             : entry.value;
 
-          const isCurrency = entry.name && /sale|revenue|profit|price|cost|amount/i.test(entry.name);
-          const formattedVal = isCurrency ? `$${val}` : String(val);
+          const formattedVal = `${isCurrency ? '$' : ''}${val}${isPercent ? '%' : ''}`;
 
           return (
             <div key={idx} className="flex items-center justify-between gap-3">
@@ -75,7 +86,7 @@ function PowerBITooltip({ active, payload, label }: any) {
                   style={{ backgroundColor: entry.color || entry.fill || CHART_PALETTE[idx % CHART_PALETTE.length] }}
                 />
                 <span className="text-muted-foreground capitalize">
-                  {entry.name?.replace(/_/g, ' ') || 'Value'}:
+                  {metricLabels[entry.dataKey] || entry.name?.replace(/_/g, ' ') || 'Value'}:
                 </span>
               </div>
               <span className="font-bold text-foreground font-mono">{formattedVal}</span>
@@ -92,6 +103,20 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
   const [selectedMetric, setSelectedMetric] = useState(chart.y_key);
   const [isFocusOpen, setIsFocusOpen] = useState(false);
   const [focusTab, setFocusTab] = useState<'visual' | 'data'>('visual');
+  const selectedMetricIsCurrency =
+    chart.metric_currency?.[selectedMetric] ?? chart.is_currency ?? false;
+  const selectedMetricIsPercent = selectedMetric.endsWith('_pct');
+  const selectedMetricAggregation = chart.metric_aggregations?.[selectedMetric];
+  const metricTitlePrefix = ['Total', 'Average', 'Count'].includes(selectedMetricAggregation || '')
+    ? `${selectedMetricAggregation} `
+    : '';
+  const displayTitle = chart.metric_labels?.[selectedMetric]
+    ? chart.category === 'Time Trend'
+      ? `Monthly ${metricTitlePrefix}${chart.metric_labels[selectedMetric]}`
+      : ['Segment Performance', 'Profitability', 'Pricing'].includes(chart.category || '')
+        ? `${metricTitlePrefix}${chart.metric_labels[selectedMetric]} by ${chart.x_key.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase())}`
+        : chart.title
+    : chart.title;
 
   // Format tick labels
   const formatYAxis = (val: any): string => {
@@ -101,6 +126,8 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
     if (num >= 1000) return `${(num / 1000).toFixed(1)}k`;
     return String(num);
   };
+  const formatMetricAxis = (value: number): string =>
+    `${selectedMetricIsCurrency ? '$' : ''}${formatYAxis(value)}${selectedMetricIsPercent ? '%' : ''}`;
 
   // Filtered dataset if activeFilter applies
   const chartData = useMemo(() => {
@@ -126,7 +153,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `${chart.title.toLowerCase().replace(/\s+/g, '_')}_data.csv`);
+    link.setAttribute('download', `${displayTitle.toLowerCase().replace(/\s+/g, '_')}_data.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -134,7 +161,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
 
   const handleAskAI = () => {
     onAskAI(
-      `Can you analyze the chart "${chart.title}"? The primary dimension is ${chart.x_key} and plotted metric is ${selectedMetric}. What are the major takeaways?`
+      `Can you analyze the chart "${displayTitle}"? The primary dimension is ${chart.x_key} and plotted metric is ${selectedMetric}. What are the major takeaways?`
     );
   };
 
@@ -186,9 +213,9 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
-                tickFormatter={formatYAxis}
+                tickFormatter={formatMetricAxis}
               />
-              <Tooltip content={<PowerBITooltip />} />
+              <Tooltip content={<PowerBITooltip isCurrency={selectedMetricIsCurrency} isPercent={selectedMetricIsPercent} metricLabels={chart.metric_labels} />} />
               <Area
                 type="monotone"
                 dataKey={selectedMetric}
@@ -228,9 +255,9 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
-                tickFormatter={formatYAxis}
+                tickFormatter={formatMetricAxis}
               />
-              <Tooltip content={<PowerBITooltip />} />
+              <Tooltip content={<PowerBITooltip isCurrency={selectedMetricIsCurrency} isPercent={selectedMetricIsPercent} metricLabels={chart.metric_labels} />} />
               <Line
                 type="monotone"
                 dataKey={selectedMetric}
@@ -258,7 +285,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
           <div className="relative w-full h-full flex items-center justify-center">
             <ResponsiveContainer width="100%" height={height}>
               <PieChart>
-                <Tooltip content={<PowerBITooltip />} />
+                <Tooltip content={<PowerBITooltip isCurrency={selectedMetricIsCurrency} isPercent={selectedMetricIsPercent} metricLabels={chart.metric_labels} />} />
                 <Pie
                   data={chartData}
                   dataKey={selectedMetric === chart.y_key ? 'value' : selectedMetric}
@@ -294,9 +321,9 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
             {/* Center Summary Label */}
             {totalDonutSum !== null && (
               <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none mb-8">
-                <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Total</span>
+                <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Records</span>
                 <span className="text-base font-bold text-foreground">
-                  {totalDonutSum >= 1000 ? `$${(totalDonutSum / 1000).toFixed(1)}k` : `$${totalDonutSum.toFixed(0)}`}
+                  {totalDonutSum.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                 </span>
               </div>
             )}
@@ -320,7 +347,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
-                tickFormatter={formatYAxis}
+                tickFormatter={formatMetricAxis}
               />
               {chart.secondary_y_key && (
                 <YAxis
@@ -329,10 +356,10 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
                   tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                   tickLine={false}
                   axisLine={false}
-                  tickFormatter={formatYAxis}
+                  tickFormatter={formatMetricAxis}
                 />
               )}
-              <Tooltip content={<PowerBITooltip />} />
+              <Tooltip content={<PowerBITooltip isCurrency={selectedMetricIsCurrency} isPercent={selectedMetricIsPercent} metricLabels={chart.metric_labels} />} />
               <Bar
                 yAxisId="left"
                 dataKey={selectedMetric}
@@ -356,24 +383,37 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
 
       case 'bar':
       default:
+        const isHorizontalBar = ['Pricing', 'Profitability'].includes(chart.category || '');
         return (
           <ResponsiveContainer width="100%" height={height}>
-            <BarChart data={chartData} margin={{ top: 10, right: 15, left: -20, bottom: 0 }}>
+            <BarChart
+              data={chartData}
+              layout={isHorizontalBar ? 'vertical' : 'horizontal'}
+              margin={{ top: 10, right: 15, left: isHorizontalBar ? 12 : -20, bottom: 0 }}
+            >
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.6} />
               <XAxis
-                dataKey={chart.x_key}
+                dataKey={isHorizontalBar ? selectedMetric : chart.x_key}
+                type={isHorizontalBar ? 'number' : 'category'}
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
                 dy={6}
+                tickFormatter={isHorizontalBar ? formatMetricAxis : undefined}
               />
               <YAxis
+                dataKey={isHorizontalBar ? chart.x_key : undefined}
+                type={isHorizontalBar ? 'category' : 'number'}
+                width={isHorizontalBar ? 112 : 56}
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
-                tickFormatter={formatYAxis}
+                tickFormatter={isHorizontalBar ? undefined : formatMetricAxis}
               />
-              <Tooltip content={<PowerBITooltip />} cursor={{ fill: 'hsl(var(--muted)/0.4)' }} />
+              <Tooltip
+                content={<PowerBITooltip isCurrency={selectedMetricIsCurrency} isPercent={selectedMetricIsPercent} metricLabels={chart.metric_labels} />}
+                cursor={{ fill: 'hsl(var(--muted)/0.4)' }}
+              />
               <Bar
                 dataKey={selectedMetric}
                 fill={primaryColor}
@@ -402,7 +442,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <CardTitle className="text-sm font-semibold tracking-tight text-foreground line-clamp-1">
-                {chart.title}
+                {displayTitle}
               </CardTitle>
               {chart.category && (
                 <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
@@ -429,7 +469,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
               >
                 {chart.available_metrics.map((m) => (
                   <option key={m} value={m}>
-                    {m.replace(/_/g, ' ').toUpperCase()}
+                    {chart.metric_labels?.[m] || m.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase())}
                   </option>
                 ))}
               </select>
@@ -495,6 +535,13 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
           </div>
         </CardHeader>
 
+        {chart.insight && (
+          <div className="mx-4 mt-3 rounded-lg border border-primary/15 bg-primary/[0.04] px-3 py-2 text-xs leading-relaxed text-foreground/85">
+            <span className="mr-1.5 font-semibold text-primary">Decision signal</span>
+            {chart.insight}
+          </div>
+        )}
+
         {/* Visual Content Canvas */}
         <CardContent className="p-4 pt-2 flex-1 flex flex-col justify-center">
           <div className="h-[280px] w-full mt-2">
@@ -514,7 +561,7 @@ export function PowerBIChartCard({ chart, onAskAI, activeFilter }: PowerBIChartC
                   <BarChart3 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-foreground">{chart.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground">{displayTitle}</h3>
                   <p className="text-xs text-muted-foreground">Power BI Focus Mode Visualizer & Data Inspector</p>
                 </div>
               </div>
