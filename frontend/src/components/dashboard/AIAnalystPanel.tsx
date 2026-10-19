@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
   Bot, User, Code2, Database, CheckCircle, Send,
-  Activity, Sparkles, Trash2, ArrowRight, CornerDownLeft
+  Activity, Sparkles, Trash2, ArrowRight, CornerDownLeft, AlertCircle
 } from 'lucide-react';
 
 interface Message {
@@ -15,6 +15,7 @@ interface Message {
   code_generated?: string;
   sql_generated?: string;
   evaluation?: any;
+  errors?: string[];
 }
 
 export function AIAnalystPanel({
@@ -73,7 +74,8 @@ export function AIAnalystPanel({
           agent_used: data.agent_used,
           code_generated: data.code_generated,
           sql_generated: data.sql_generated,
-          evaluation: data.evaluation
+          evaluation: data.evaluation,
+          errors: data.errors
         }
       ]);
     } catch (error) {
@@ -156,14 +158,31 @@ export function AIAnalystPanel({
                 <div className="whitespace-pre-wrap">{msg.content}</div>
 
                 {/* Technical Inspector Accordion */}
-                {(msg.agent_used || msg.sql_generated || msg.code_generated || msg.evaluation) && (
+                {(msg.agent_used || msg.sql_generated || msg.code_generated || msg.evaluation || (msg.errors && msg.errors.length > 0)) && (
                   <div className="mt-3 pt-2.5 border-t border-border/50 space-y-2 text-[11px]">
                     {msg.agent_used && (
                       <div className="flex items-center gap-1 text-muted-foreground">
-                        <CheckCircle className="w-3 h-3 text-emerald-500" />
+                        {msg.agent_used === 'FINISH' ? (
+                          <AlertCircle className="w-3.5 h-3.5 text-amber-500" />
+                        ) : (
+                          <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
+                        )}
                         <span>
                           Agent: <strong className="text-foreground">{msg.agent_used}</strong>
                         </span>
+                      </div>
+                    )}
+
+                    {msg.errors && msg.errors.length > 0 && (
+                      <div className="p-2.5 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-[11px] space-y-1">
+                        <div className="font-semibold flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" /> Diagnostics
+                        </div>
+                        <ul className="list-disc list-inside space-y-0.5 opacity-90">
+                          {msg.errors.map((err, i) => (
+                            <li key={i} className="break-words">{err}</li>
+                          ))}
+                        </ul>
                       </div>
                     )}
 

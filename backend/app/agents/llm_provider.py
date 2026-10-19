@@ -11,36 +11,35 @@ load_dotenv()
 class LLMProvider:
     @staticmethod
     def get_llm(provider: str = "gemini", model: str = None, temperature: float = 0.0) -> BaseChatModel:
-        # Graceful fallback logic
         gemini_key = os.getenv("GEMINI_API_KEY")
         groq_key = os.getenv("GROQ_API_KEY")
         
         if provider == "gemini" and gemini_key:
             return ChatGoogleGenerativeAI(
-                model=model or "gemini-2.5-flash",
+                model=model or os.getenv("GEMINI_MODEL", "gemini-2.0-flash"),
                 temperature=temperature,
                 google_api_key=gemini_key
             )
         elif provider == "groq" and groq_key:
             return ChatGroq(
-                model=model or os.getenv("GROQ_MODEL", "openai/gpt-oss-120b"),
+                model=model or os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
                 temperature=temperature,
                 groq_api_key=groq_key
             )
         elif gemini_key:
             return ChatGoogleGenerativeAI(
-                model="gemini-2.5-flash",
+                model=model or os.getenv("GEMINI_MODEL", "gemini-2.0-flash"),
                 temperature=temperature,
                 google_api_key=gemini_key
             )
         elif groq_key:
             return ChatGroq(
-                model="llama3-70b-8192",
+                model=model or os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
                 temperature=temperature,
                 groq_api_key=groq_key
             )
         else:
-            raise ValueError("No valid API keys found for GEMINI or GROQ.")
+            raise ValueError("No LLM API keys configured. Set GEMINI_API_KEY or GROQ_API_KEY.")
 
     @staticmethod
     def invoke_with_fallback(
@@ -51,23 +50,25 @@ class LLMProvider:
         prompt_text: Optional[str] = None,
         temperature: float = 0.0,
     ) -> BaseModel:
+        gemini_configured = bool(os.getenv("GEMINI_API_KEY"))
+        groq_configured = bool(os.getenv("GROQ_API_KEY"))
         configured = {
-            "groq": bool(os.getenv("GROQ_API_KEY")),
-            "gemini": bool(os.getenv("GEMINI_API_KEY")),
+            "gemini": gemini_configured,
+            "groq": groq_configured,
         }
-        preferred = os.getenv("LLM_PROVIDER", "groq").strip().lower()
-        providers = [preferred, "gemini" if preferred == "groq" else "groq"]
+        
+        default_pref = "gemini" if gemini_configured else "groq"
+        preferred = os.getenv("LLM_PROVIDER", default_pref).strip().lower()
+        other = "groq" if preferred == "gemini" else "gemini"
+        providers = [preferred, other]
         failures = []
 
         for provider in providers:
-            if provider not in configured or not configured[provider]:
+            if not configured.get(provider):
                 continue
             try:
                 llm = LLMProvider.get_llm(provider=provider, temperature=temperature)
-                if provider == "groq":
-                    structured_llm = llm.with_structured_output(output_schema, method="json_schema")
-                else:
-                    structured_llm = llm.with_structured_output(output_schema)
+                structured_llm = llm.with_structured_output(output_schema)
                 if prompt is not None:
                     return (prompt | structured_llm).invoke(values or {})
                 return structured_llm.invoke(prompt_text)
