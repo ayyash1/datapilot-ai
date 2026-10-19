@@ -60,7 +60,8 @@ export function AIAnalystPanel({
     setIsTyping(true);
 
     try {
-      const res = await axios.post('/api/chat/', {
+      const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || '';
+      const res = await axios.post(`${apiBase}/api/chat/`, {
         dataset_id: datasetId,
         query: msgToSend
       });
@@ -78,13 +79,23 @@ export function AIAnalystPanel({
           errors: data.errors
         }
       ]);
-    } catch (error) {
+    } catch (error: any) {
+      const serverDetail = error.response?.data?.detail;
+      const status = error.response?.status;
+      let errorMessage = 'Sorry, I encountered an issue processing your request.';
+      if (status === 504) {
+        errorMessage = 'Request timed out (HTTP 504). The multi-agent workflow took longer than the serverless timeout limit. Try a more specific query.';
+      } else if (serverDetail) {
+        errorMessage = `Backend error (HTTP ${status}): ${typeof serverDetail === 'string' ? serverDetail : JSON.stringify(serverDetail)}`;
+      } else if (error.message) {
+        errorMessage = `${error.message}. Please verify the backend service status.`;
+      }
       setMessages((prev) => [
         ...prev,
         {
           role: 'ai',
-          content:
-            'Sorry, I encountered an issue processing your request. Please ensure the backend agent services are running.'
+          content: errorMessage,
+          agent_used: 'ERROR'
         }
       ]);
     } finally {

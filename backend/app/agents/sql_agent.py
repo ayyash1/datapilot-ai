@@ -59,7 +59,7 @@ def sql_analyst_agent(state: AgentState) -> AgentState:
             con.register('dataset', df)
             
         query_result = con.execute(sql_query).df()
-        state["analysis_results"] = query_result.to_dict(orient="records")
+        state["analysis_results"] = query_result.head(100).to_dict(orient="records")
         con.close()
         
     except Exception as e:
