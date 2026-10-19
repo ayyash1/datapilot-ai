@@ -1,0 +1,607 @@
+order_id,order_date,region,customer_segment,sales_channel,product_category,product_name,quantity,unit_price,discount_pct,revenue,unit_cost,profit,return_status,delivery_days,customer_rating,payment_method,customer_age,promotion_code,shipping_cost
+DP-2024-00001,2024-02-18,South,Corporate,Marketplace,Home & Kitchen,Air Purifier,1,41.71,0.0,41.71,29.75,1.85,Kept,2,3,Pay Later,,CLEARANCE,10.11
+DP-2024-00002,2024-10-23,South,Small Business,Marketplace,Home & Kitchen,Coffee Maker,2,27.25,0.1,49.05,19.53,3.9,Kept,5,,Debit Card,29,CLEARANCE,6.09
+DP-2025-00003,2025-03-09,West,Consumer,Store,Outdoor,Camping Lantern,2,78.42,0.0,156.84,53.25,38.22,Kept,3,4,Credit Card,34,CLEARANCE,12.12
+DP-2024-00004,2024-03-16,Midwest,Corporate,Store,Home & Kitchen,Air Purifier,4,72.76,0.25,218.28,53.29,-0.91,Kept,,3,,,,6.03
+DP-2024-00005,2024-06-11,Northeast,Corporate,Marketplace,Outdoor,Picnic Blanket,3,70.04,0.0,210.12,43.61,71.68,Kept,2,3,Pay Later,,LOYAL15,7.61
+DP-2024-00006,2024-12-12,Northeast,Corporate,Online,Home & Kitchen,Desk Lamp,1,17.23,0.0,17.23,12.2,1.04,Kept,8,,Credit Card,20,NONE,3.99
+DP-2025-00007,2025-03-07,South,Corporate,Online,Electronics,Laptop Stand,3,41.86,0.0,125.58,27.95,30.15,Kept,,5,Debit Card,44,WELCOME,11.58
+DP-2024-00008,2024-10-07,South,Corporate,Online,Home & Kitchen,Air Purifier,2,19.57,0.1,35.23,14.82,-1.29,Kept,,,Debit Card,,CLEARANCE,6.88
+DP-2025-00009,2025-06-19,Midwest,Consumer,Marketplace,Office,Notebook Set,1,152.65,0.1,137.39,93.5,35.85,Kept,1,5,Pay Later,42,WELCOME,8.04
+DP-2025-00010,2025-06-23,West,Corporate,Store,Outdoor,Camping Lantern,1,26.67,0.25,20.0,18.05,-4.38,Kept,,,,,SPRING10,6.33
+DP-2025-00011,2025-07-24,Northeast,Consumer,Store,Outdoor,Camping Lantern,5,131.31,0.0,656.55,85.23,220.64,Kept,,5,,24,,9.76
+DP-2025-00012,2025-07-26,West,Consumer,Marketplace,Outdoor,Picnic Blanket,3,56.23,0.15,143.39,35.08,32.1,Kept,3,,,,SPRING10,6.05
+DP-2024-00013,2024-06-01,South,Small Business,Store,Office,Ergonomic Chair,4,123.43,0.0,493.72,73.88,191.06,Kept,3,3,Debit Card,,CLEARANCE,7.14
+DP-2025-00014,2025-10-10,Midwest,Consumer,Online,Home & Kitchen,Air Purifier,4,16.7,0.05,63.46,12.13,9.95,Kept,3,4,Digital Wallet,,NONE,4.99
+DP-2025-00015,2025-11-26,Midwest,Consumer,Store,Electronics,Smart Speaker,2,19.11,0.05,36.31,13.69,-3.51,Kept,8,,Pay Later,54,,12.44
+DP-2024-00016,2024-08-20,Midwest,Corporate,Store,Home & Kitchen,Cookware Set,1,52.81,0.1,47.53,36.65,0.21,Kept,,,Debit Card,23,,
+DP-2025-00017,2025-10-15,South,Consumer,Online,Office,Notebook Set,2,210.06,0.0,420.12,127.14,154.48,Kept,4,,,,LOYAL15,11.36
+DP-2024-00018,2024-07-10,Northeast,Consumer,Marketplace,Home & Kitchen,Air Purifier,2,278.83,0.05,529.78,196.36,129.94,Kept,7,4,Pay Later,,WELCOME,7.12
+DP-2024-00019,2024-11-08,West,,Store,Home & Kitchen,Air Purifier,2,76.22,0.05,144.82,53.03,25.65,Kept,7,8,Pay Later,53,CLEARANCE,13.11
+DP-2025-00020,2025-10-16,South,Corporate,Marketplace,Electronics,Webcam,5,224.34,0.1,1009.53,154.14,230.61,Kept,,1,Pay Later,,NONE,8.22
+DP-2024-00021,2024-04-27,South,Small Business,Store,Office,Notebook Set,2,21.27,0.05,40.41,13.43,9.37,Kept,,4,,70,SPRING10,
+DP-2024-00022,2024-05-17,West,Consumer,Marketplace,Outdoor,Camping Lantern,1,146.13,0.0,146.13,101.77,39.48,Kept,2,3,Credit Card,67,CLEARANCE,4.88
+DP-2024-00023,2024-10-12,West,Corporate,Store,Office,Monitor Arm,1,42.29,0.2,33.83,24.88,-6.68,Returned,7,5,Digital Wallet,,NONE,9.54
+DP-2025-00024,2025-05-27,West,Small Business,Store,Office,Ergonomic Chair,2,276.73,0.15,470.44,165.22,131.1,Kept,5,,Pay Later,,,8.9
+DP-2025-00025,2025-09-13,South,Small Business,Online,Electronics,Laptop Stand,1,34.12,0.1,30.71,22.83,-4.49,Kept,7,,Credit Card,,,12.37
+DP-2024-00026,2024-11-13,Midwest,Corporate,Online,Office,Monitor Arm,3,83.73,0.0,251.19,50.63,91.77,Kept,5,4,Pay Later,,NONE,7.53
+DP-2025-00027,2025-01-01,South,Small Business,Online,Electronics,Wireless Headphones,2,184.09,0.0,368.18,123.41,115.14,,,5,Debit Card,71,WELCOME,6.22
+DP-2025-00028,2025-01-16,South,Consumer,Online,Office,Notebook Set,5,250.62,0.0,1253.1,156.6,464.74,Kept,2,,Credit Card,65,,5.36
+DP-2025-00029,2025-08-10,South,Corporate,Store,Office,Notebook Set,4,48.91,0.2,156.51,31.55,18.33,Kept,2,5,Pay Later,,,11.98
+DP-2025-00030,2025-10-04,West,Corporate,Store,Outdoor,Travel Backpack,1,286.34,0.05,272.02,197.06,63.91,Kept,3,5,Debit Card,40,,11.05
+DP-2024-00031,2024-04-13,Midwest,Corporate,Online,Home & Kitchen,Cookware Set,4,102.63,0.05,389.99,74.76,84.46,Kept,10,3,,,,6.49
+DP-2024-00032,2024-09-24,Northeast,Consumer,Marketplace,Outdoor,Picnic Blanket,4,118.75,0.1,427.5,81.53,87.81,Kept,,,Debit Card,,,13.57
+DP-2025-00033,2025-01-09,Midwest,Corporate,Marketplace,Office,Monitor Arm,3,150.99,0.2,362.38,92.78,78.56,Kept,3,5,Debit Card,36,SPRING10,5.48
+DP-2024-00034,2024-04-24,West,Small Business,Online,Office,Ergonomic Chair,2,80.39,0.15,136.66,49.49,10.06,Returned,2,4,,39,,3.02
+DP-2025-00035,2025-11-08,South,Corporate,Online,Outdoor,Camping Lantern,1,23.74,0.1,21.37,16.49,-2.01,,8,4,,,LOYAL15,6.89
+DP-2024-00036,2024-04-10,West,Consumer,Store,Outdoor,Camping Lantern,3,22.28,0.25,50.13,14.7,-3.05,Kept,9,3,Digital Wallet,69,WELCOME,9.08
+DP-2024-00037,2024-03-26,South,Small Business,Online,Electronics,Wireless Headphones,2,30.61,0.0,61.22,20.19,10.73,Kept,4,,Digital Wallet,20,NONE,10.11
+DP-2024-00038,2024-01-04,Midwest,Corporate,Online,Outdoor,Travel Backpack,1,58.55,0.05,55.62,39.76,9.42,Kept,10,5,Digital Wallet,,CLEARANCE,6.44
+DP-2025-00039,2025-04-03,South,,Marketplace,Outdoor,Travel Backpack,3,38.24,0.1,103.25,24.99,23.93,Kept,7,,Pay Later,,,
+DP-2025-00040,2025-03-09,South,Corporate,Online,Home & Kitchen,Coffee Maker,4,20.21,0.05,76.8,14.83,12.86,Kept,9,,Pay Later,,LOYAL15,
+DP-2025-00041,2025-08-18,,Consumer,Online,Office,Desk Organizer,1,23.75,0.05,22.56,14.59,2.23,Kept,8,5,Debit Card,,NONE,5.74
+DP-2025-00042,2025-05-02,Northeast,Small Business,Store,Outdoor,Camping Lantern,1,18.36,0.0,18.36,11.41,-2.2,Kept,,3,,,,9.15
+DP-2024-00043,2024-10-05,Midwest,Corporate,Marketplace,Electronics,Webcam,1,27.17,0.05,25.81,18.81,1.15,Kept,8,4,,58,LOYAL15,5.85
+DP-2025-00044,2025-11-24,South,Corporate,Marketplace,Outdoor,Camping Lantern,5,31.49,0.15,133.83,20.32,28.88,,6,1,Debit Card,72,NONE,3.35
+DP-2025-00045,2025-09-01,Northeast,Corporate,Store,Outdoor,Insulated Bottle,1,86.79,0.15,73.77,55.26,13.48,,,4,Debit Card,74,CLEARANCE,5.03
+DP-2025-00046,2025-12-19,Midwest,Corporate,Online,Office,Monitor Arm,1,228.2,0.25,171.15,134.08,26.48,Kept,6,3,Pay Later,58,,
+DP-2024-00047,2024-02-26,West,Small Business,Store,Outdoor,Camping Lantern,5,79.28,0.0,396.4,49.29,142.09,Kept,2,3,Debit Card,21,,
+DP-2024-00048,2024-07-02,South,Small Business,Online,Home & Kitchen,Coffee Maker,4,84.78,0.15,288.25,65.08,17.52,Kept,2,,Digital Wallet,,CLEARANCE,10.41
+DP-2025-00049,2025-10-18,West,Consumer,Marketplace,Outdoor,Camping Lantern,1,36.19,0.25,27.14,23.46,-2.18,Kept,10,,Digital Wallet,25,WELCOME,5.86
+DP-2025-00050,2025-06-13,South,Consumer,Online,Electronics,Smart Speaker,5,15.97,0.0,79.85,11.18,0.55,Returned,,2,Credit Card,24,WELCOME,9.03
+DP-2025-00051,2025-01-18,Midwest,Consumer,Store,Office,Desk Organizer,2,187.67,0.15,319.04,117.64,74.41,Kept,9,,Credit Card,,WELCOME,9.35
+DP-2024-00052,2024-01-09,Midwest,Corporate,,Electronics,Laptop Stand,5,19.84,0.1,89.28,14.26,10.03,Kept,,5,Credit Card,23,NONE,7.95
+DP-2025-00053,2025-02-23,South,Consumer,Marketplace,Electronics,Smart Speaker,1,56.86,0.05,54.02,39.61,1.34,Kept,7,,Debit Card,,,13.07
+DP-2024-00054,2024-10-26,Northeast,Consumer,Marketplace,Outdoor,Picnic Blanket,1,189.65,0.1,170.69,127.36,31.88,Kept,5,5,Pay Later,,SPRING10,11.45
+DP-2025-00055,2025-09-17,West,Consumer,Store,Home & Kitchen,Desk Lamp,2,143.0,0.2,228.8,108.67,0.78,Kept,5,,Debit Card,48,LOYAL15,10.68
+DP-2025-00056,2025-07-22,Northeast,Corporate,Marketplace,Home & Kitchen,Air Purifier,2,244.91,0.05,465.33,168.93,113.5,Kept,6,,Credit Card,65,LOYAL15,13.97
+DP-2025-00057,2025-03-02,Midwest,Small Business,Marketplace,Office,Monitor Arm,3,261.81,0.2,628.34,152.63,159.8,Kept,10,5,Credit Card,46,,10.65
+DP-2024-00058,2024-08-26,South,Corporate,Marketplace,Electronics,Webcam,1,81.07,0.2,64.86,56.52,5.31,Kept,4,5,Credit Card,,,3.03
+DP-2025-00059,2025-02-24,South,Small Business,Store,Office,Notebook Set,1,57.41,0.05,54.54,37.45,13.62,Kept,2,4,Digital Wallet,20,SPRING10,
+DP-2025-00060,2025-02-06,South,Consumer,Marketplace,Home & Kitchen,Air Purifier,3,170.12,0.0,510.36,125.57,124.01,Kept,9,4,Debit Card,,SPRING10,9.64
+DP-2025-00061,2025-05-19,Northeast,Corporate,Store,Office,Notebook Set,2,104.16,0.15,177.07,65.53,33.1,Kept,,,,46,,12.91
+DP-2025-00062,2025-07-01,Northeast,Corporate,Online,Home & Kitchen,Coffee Maker,2,31.29,0.05,59.45,23.6,-1.57,Kept,10,4,Debit Card,18,WELCOME,13.82
+DP-2025-00063,2025-05-08,South,Corporate,Marketplace,Home & Kitchen,Cookware Set,3,117.22,0.1,316.49,82.89,58.13,Kept,7,,Debit Card,,SPRING10,9.69
+DP-2025-00064,2025-06-10,Midwest,Small Business,Marketplace,Home & Kitchen,Air Purifier,5,21.21,0.05,100.75,14.74,17.73,Kept,9,5,Digital Wallet,26,WELCOME,9.32
+DP-2025-00065,2025-04-21,South,Small Business,Marketplace,Electronics,Smart Speaker,1,26.92,0.0,26.92,18.79,1.64,Kept,4,3,,,,6.49
+DP-2024-00066,2024-04-17,Northeast,Small Business,Online,Outdoor,Travel Backpack,2,57.04,0.25,85.56,39.31,3.15,Kept,3,,Digital Wallet,44,CLEARANCE,
+DP-2024-00067,2024-07-23,Northeast,Small Business,Marketplace,Outdoor,Insulated Bottle,2,106.81,0.05,202.94,70.93,52.64,Kept,3,3,,58,SPRING10,8.44
+DP-2025-00068,2025-10-22,South,Consumer,Online,Electronics,Webcam,5,55.73,0.2,222.92,38.59,17.01,Kept,4,4,Credit Card,,CLEARANCE,12.96
+DP-2024-00069,2024-01-15,South,Consumer,Online,Home & Kitchen,Desk Lamp,3,25.76,0.2,61.82,19.58,-7.48,Kept,4,5,Pay Later,31,CLEARANCE,10.56
+DP-2024-00070,2024-07-01,South,Consumer,Marketplace,Electronics,Wireless Headphones,2,29.58,0.05,56.2,21.17,4.83,Kept,4,3,Digital Wallet,,,9.03
+DP-2025-00071,2025-06-24,South,Consumer,Store,Electronics,Laptop Stand,1,73.61,0.0,73.61,52.17,-3.51,Returned,9,,Credit Card,30,,11.7
+DP-2025-00072,2025-09-03,South,Corporate,Store,Home & Kitchen,Coffee Maker,3,26.67,0.0,80.01,20.28,10.28,Kept,2,,Pay Later,,WELCOME,8.89
+DP-2025-00073,2025-12-12,Northeast,Consumer,Marketplace,Outdoor,Travel Backpack,5,242.29,0.0,1211.45,166.2,375.54,Kept,,4,Debit Card,22,CLEARANCE,
+DP-2025-00074,2025-09-01,South,,Store,Electronics,Wireless Headphones,4,159.69,0.25,479.07,105.05,55.32,Kept,10,3,,61,,
+DP-2025-00075,2025-03-11,South,Consumer,Online,Outdoor,Insulated Bottle,1,37.12,0.25,27.84,25.81,-7.05,Kept,5,,Debit Card,24,SPRING10,9.08
+DP-2025-00076,2025-02-04,West,Consumer,Online,Office,Notebook Set,1,187.44,0.15,159.32,112.71,33.4,Kept,3,,Pay Later,55,NONE,13.21
+DP-2025-00077,2025-12-18,South,Corporate,Online,Electronics,Smart Speaker,4,52.2,0.0,208.8,35.01,59.98,Kept,3,,Credit Card,32,CLEARANCE,
+DP-2024-00078,2024-06-20,West,Corporate,Store,Electronics,Smart Speaker,4,28.42,0.0,113.68,19.35,25.64,Kept,6,,Pay Later,27,WELCOME,
+DP-2024-00079,2024-08-26,Midwest,,Store,Office,Monitor Arm,5,76.12,0.0,380.6,46.32,145.91,Kept,1,5,Digital Wallet,,,3.09
+DP-2024-00080,2024-09-12,Midwest,Corporate,Online,Office,Desk Organizer,1,21.24,0.05,20.18,12.91,-6.18,Kept,,5,Digital Wallet,34,NONE,
+DP-2025-00081,2025-11-22,Midwest,Consumer,Online,Electronics,Laptop Stand,5,149.24,0.0,746.2,109.07,193.44,Kept,,5,Digital Wallet,,,
+DP-2025-00082,2025-10-14,Northeast,Small Business,Store,Office,Notebook Set,5,174.25,0.3,609.88,104.61,75.25,Kept,6,4,Digital Wallet,36,SPRING10,11.58
+DP-2025-00083,2025-01-08,West,Corporate,Online,Home & Kitchen,Desk Lamp,1,242.34,0.0,242.34,172.93,58.72,Kept,1,,Digital Wallet,60,,10.69
+DP-2024-00084,2024-12-07,West,,Marketplace,Outdoor,Camping Lantern,1,32.39,0.2,25.91,21.5,-3.11,Kept,4,5,Debit Card,,,7.52
+DP-2025-00085,2025-09-20,West,Small Business,Store,Home & Kitchen,Cookware Set,2,109.69,0.0,219.38,78.97,47.6,Kept,5,5,Debit Card,30,,13.84
+DP-2024-00086,2024-10-02,Northeast,Corporate,Online,Office,Ergonomic Chair,5,123.38,0.1,555.21,77.94,160.08,Kept,,4,Credit Card,,LOYAL15,5.43
+DP-2024-00087,2024-03-27,Midwest,Corporate,Store,Office,Notebook Set,1,111.91,0.0,111.91,73.24,34.01,Kept,,5,,63,LOYAL15,
+DP-2025-00088,2025-06-19,Midwest,Consumer,Store,Electronics,Smart Speaker,3,213.05,0.0,639.15,146.11,187.62,Kept,-2,,Digital Wallet,,NONE,13.2
+DP-2024-00089,2024-03-03,South,Corporate,Online,Office,Notebook Set,3,70.2,0.15,179.01,41.13,15.69,Returned,7,5,Debit Card,41,LOYAL15,
+DP-2025-00090,2025-09-15,Midwest,Corporate,Store,Electronics,Wireless Headphones,5,24.52,0.0,122.6,17.84,25.48,Kept,4,4,Credit Card,50,LOYAL15,7.92
+DP-2025-00091,2025-05-04,South,Consumer,Marketplace,Electronics,Laptop Stand,2,69.69,0.05,132.41,47.14,28.13,Kept,1,,Credit Card,30,,10.0
+DP-2024-00092,2024-07-18,West,Small Business,Store,Home & Kitchen,Air Purifier,2,49.55,0.05,94.14,34.49,13.5,Kept,8,,Debit Card,53,,11.66
+DP-2025-00093,2025-11-05,South,Corporate,Marketplace,Electronics,Webcam,2,84.85,0.1,152.73,61.28,22.8,Kept,1,5,Credit Card,63,,7.37
+DP-2025-00094,2025-12-18,Northeast,Corporate,Online,Office,Notebook Set,2,26.39,,42.22,16.43,0.11,Kept,,5,Credit Card,27,WELCOME,9.25
+DP-2024-00095,2024-08-04,Midwest,Corporate,Marketplace,Office,Ergonomic Chair,1,95.19,0.1,85.67,60.12,13.14,Kept,10,4,Pay Later,,,12.41
+DP-2025-00096,2025-10-13,Midwest,,Store,Home & Kitchen,Cookware Set,3,115.1,0.0,345.3,81.44,88.89,Kept,,5,Debit Card,65,,12.09
+DP-2025-00097,2025-06-06,Northeast,Small Business,Online,Electronics,Wireless Headphones,3,33.79,0.1,91.23,24.61,8.33,Kept,1,5,Digital Wallet,26,SPRING10,9.07
+DP-2024-00098,2024-01-14,South,Consumer,Store,Outdoor,Insulated Bottle,5,210.41,0.0,1052.05,138.43,353.68,Kept,,,Digital Wallet,,NONE,6.22
+DP-2025-00099,2025-08-03,South,Consumer,Online,Office,Monitor Arm,3,18.51,0.15,47.2,11.8,3.32,Kept,,,Pay Later,68,,
+DP-2024-00100,2024-07-07,South,Small Business,Store,Office,Desk Organizer,1,222.92,0.25,167.19,139.32,23.87,Kept,10,,Debit Card,,,
+DP-2024-00101,2024-01-27,South,Corporate,Online,Office,Ergonomic Chair,1,16.18,0.0,16.18,10.14,-5.61,Kept,2,,Credit Card,,,11.65
+DP-2025-00102,2025-02-17,South,Corporate,Store,Outdoor,Travel Backpack,5,22.71,0.3,79.48,15.57,-7.31,Kept,6,5,Debit Card,,WELCOME,
+DP-2025-00103,2025-09-16,West,Corporate,Marketplace,Home & Kitchen,Desk Lamp,3,29.4,0.05,83.79,21.06,10.31,Kept,,2,Debit Card,68,CLEARANCE,10.3
+DP-2024-00104,2024-03-11,West,Corporate,Online,Outdoor,Insulated Bottle,1,86.54,0.15,73.56,56.73,-6.84,Returned,7,4,Pay Later,,WELCOME,10.43
+DP-2025-00105,2025-04-17,Northeast,Corporate,Store,Home & Kitchen,Air Purifier,1,30.91,0.0,30.91,22.37,3.43,Kept,,,Credit Card,,CLEARANCE,5.11
+DP-2025-00106,2025-04-08,West,Corporate,Store,Outdoor,Insulated Bottle,2,107.85,0.0,215.7,72.53,63.08,Kept,7,,Pay Later,26,CLEARANCE,7.56
+DP-2025-00107,2025-08-24,Northeast,Corporate,Online,Office,Desk Organizer,5,78.6,0.0,393.0,48.1,141.56,Kept,10,5,Digital Wallet,46,WELCOME,10.94
+DP-2024-00108,2024-12-01,Midwest,Corporate,Marketplace,Office,Desk Organizer,3,74.52,0.0,223.56,47.28,67.76,Kept,4,,Pay Later,44,CLEARANCE,
+DP-2024-00109,2024-09-16,Northeast,Consumer,Marketplace,Electronics,Smart Speaker,1,172.89,0.1,155.6,119.51,30.39,Kept,,2,,42,NONE,5.7
+DP-2025-00110,2025-05-11,South,Corporate,Store,Office,Desk Organizer,5,40.33,0.1,181.48,26.0,43.59,Kept,8,,Pay Later,,WELCOME,7.89
+DP-2024-00111,2024-12-05,South,,Online,Home & Kitchen,Cookware Set,2,18.37,0.1,33.07,13.62,-2.72,Kept,,4,Digital Wallet,,NONE,8.55
+DP-2025-00112,2025-06-23,South,Consumer,Online,Outdoor,Camping Lantern,4,114.1,0.05,433.58,73.52,136.34,,5,,Credit Card,69,SPRING10,3.16
+DP-2025-00113,2025-09-17,West,Corporate,Marketplace,Home & Kitchen,Coffee Maker,1,27.17,0.0,27.17,20.93,-6.47,Kept,1,,Digital Wallet,31,CLEARANCE,12.71
+DP-2025-00114,2025-02-04,Midwest,Corporate,Online,Home & Kitchen,Desk Lamp,4,36.99,0.0,147.96,26.53,35.67,Kept,4,2,Debit Card,67,CLEARANCE,
+DP-2024-00115,2024-10-17,South,Corporate,Online,Outdoor,Insulated Bottle,1,276.33,0.15,234.88,192.19,34.36,Kept,7,,Debit Card,,,8.33
+DP-2024-00116,2024-02-20,Midwest,Consumer,Online,Office,Ergonomic Chair,1,170.94,0.1,153.85,107.09,37.99,Kept,9,4,Debit Card,,,
+DP-2025-00117,2025-10-25,West,Consumer,Online,Outdoor,Camping Lantern,3,16.19,0.05,46.14,10.09,9.36,Kept,7,,,48,CLEARANCE,6.51
+DP-2025-00118,2025-01-21,Midwest,Corporate,Marketplace,Outdoor,Travel Backpack,1,39.64,0.2,31.71,26.11,-5.67,Kept,1,,,,CLEARANCE,11.27
+DP-2025-00119,2025-12-26,South,Small Business,Online,Outdoor,Camping Lantern,1,15.36,0.0,15.36,9.55,-1.93,Kept,6,5,,51,,7.74
+DP-2024-00120,2024-02-13,South,Consumer,Marketplace,Home & Kitchen,Cookware Set,1,34.46,0.1,31.01,24.36,-5.36,Kept,6,4,Digital Wallet,,,12.01
+DP-2025-00121,2025-04-11,South,Small Business,Store,Office,Monitor Arm,2,20.58,0.2,32.93,12.05,2.86,Kept,5,,Pay Later,75,,5.97
+DP-2025-00122,2025-09-07,West,Corporate,Marketplace,Home & Kitchen,Air Purifier,1,50.16,0.25,37.62,37.01,-7.67,Kept,6,3,Digital Wallet,,NONE,
+DP-2025-00123,2025-01-18,Northeast,Consumer,Online,Outdoor,Travel Backpack,1,31.48,0.0,31.48,,-1.58,Kept,5,,Debit Card,,SPRING10,13.03
+DP-2024-00124,2024-07-03,Midwest,Consumer,Store,Electronics,Laptop Stand,2,35.92,0.1,64.66,25.37,5.29,Kept,,,,62,SPRING10,8.63
+DP-2024-00125,2024-05-21,Midwest,Corporate,Marketplace,Electronics,Laptop Stand,1,51.62,0.25,38.71,33.83,-3.22,,7,5,Digital Wallet,56,WELCOME,
+DP-2025-00126,2025-11-04,Midwest,Small Business,Marketplace,Outdoor,Travel Backpack,1,29.49,0.0,29.49,19.08,3.36,,,,,38,SPRING10,7.05
+DP-2025-00127,2025-08-16,Midwest,Consumer,Store,Electronics,Wireless Headphones,5,104.78,0.25,392.92,68.71,40.71,Kept,4,,Credit Card,,NONE,8.66
+DP-2025-00128,2025-12-21,Northeast,Consumer,Online,Home & Kitchen,Cookware Set,2,103.9,0.05,197.41,77.7,28.74,Kept,1,,Credit Card,,,13.27
+DP-2025-00129,2025-01-24,Northeast,Corporate,Online,Outdoor,Travel Backpack,2,120.76,0.2,193.22,77.12,30.25,Kept,,4,Digital Wallet,,,
+DP-2024-00130,2024-06-22,Midwest,Small Business,Store,Office,Notebook Set,4,32.11,0.1,115.6,19.8,22.79,Kept,6,3,Debit Card,,CLEARANCE,
+DP-2025-00131,2025-04-10,Midwest,Consumer,Online,Home & Kitchen,Air Purifier,5,165.98,0.0,829.9,124.9,194.27,Kept,2,,Digital Wallet,,NONE,11.13
+DP-2024-00132,2024-01-20,West,Corporate,Marketplace,Outdoor,Camping Lantern,3,74.57,0.0,223.71,49.87,62.28,Kept,3,,Credit Card,44,LOYAL15,11.82
+DP-2025-00133,2025-05-03,Midwest,,Store,Electronics,Wireless Headphones,3,57.52,0.05,163.93,40.97,32.24,Kept,3,,Pay Later,,SPRING10,8.78
+DP-2025-00134,2025-01-02,South,Corporate,Online,Electronics,Wireless Headphones,2,39.78,0.05,75.58,26.43,9.46,Kept,7,4,Digital Wallet,37,,13.26
+DP-2025-00135,2025-09-27,South,Corporate,Store,Home & Kitchen,Cookware Set,1,18.58,0.3,13.01,13.26,-10.0,Kept,10,,Credit Card,31,,
+DP-2025-00136,2025-09-24,West,Consumer,Online,Home & Kitchen,Coffee Maker,2,102.46,0.3,143.44,77.91,-24.91,Kept,7,4,Digital Wallet,,,12.53
+DP-2024-00137,2024-11-25,Midwest,Corporate,Marketplace,Electronics,Laptop Stand,4,21.08,0.0,84.32,15.11,18.65,Kept,5,4,,,,5.23
+DP-2025-00138,2025-09-18,,Small Business,Marketplace,Home & Kitchen,Air Purifier,1,27.86,0.15,23.68,20.62,-4.59,Kept,6,,,57,WELCOME,7.65
+DP-2024-00139,2024-09-12,Northeast,Small Business,Store,Electronics,Wireless Headphones,1,34.29,0.1,30.86,24.69,2.94,Kept,,3,,54,,3.23
+DP-2025-00140,2025-09-12,West,Small Business,Store,Office,Notebook Set,1,168.44,0.1,151.6,107.87,36.22,Kept,2,5,,,,
+DP-2025-00141,2025-11-13,Midwest,Small Business,Store,Outdoor,Travel Backpack,1,16.95,0.2,13.56,11.56,-11.99,Kept,9,4,Debit Card,,,13.99
+DP-2025-00142,2025-11-03,West,Small Business,Store,Office,Notebook Set,1,46.48,0.0,46.48,29.69,7.81,Kept,10,3,Digital Wallet,,,8.98
+DP-2024-00143,2024-03-18,South,,Marketplace,Outdoor,Insulated Bottle,1,53.82,0.05,51.13,34.76,2.71,Kept,8,5,Debit Card,61,,
+DP-2024-00144,2024-09-07,Midwest,Corporate,Online,Office,Monitor Arm,1,17.57,0.0,17.57,11.39,-0.62,Kept,10,,,54,LOYAL15,
+DP-2024-00145,2024-09-05,Northeast,Small Business,Marketplace,Home & Kitchen,Air Purifier,-1,50.28,0.0,150.84,35.79,34.12,Kept,,,Debit Card,,,9.35
+DP-2025-00146,2025-12-14,South,Corporate,Store,Electronics,Smart Speaker,1,21.28,0.0,21.28,14.59,-6.11,Kept,4,,Credit Card,,LOYAL15,
+DP-2024-00147,2024-07-27,South,Small Business,Online,Outdoor,Insulated Bottle,4,79.17,,237.51,54.35,11.6,,,,Debit Card,,LOYAL15,8.51
+DP-2024-00148,2024-10-21,Midwest,Small Business,Marketplace,Electronics,Webcam,4,113.73,0.0,454.92,76.59,142.69,Kept,1,,Digital Wallet,39,,5.87
+DP-2024-00149,2024-11-08,West,Small Business,Store,Electronics,Webcam,4,31.23,0.15,106.18,20.3,19.69,Kept,,3,,44,,5.29
+DP-2024-00150,2024-02-27,South,Corporate,Store,Office,Desk Organizer,1,126.09,0.1,113.48,79.25,26.62,Kept,1,,Debit Card,,SPRING10,7.61
+DP-2024-00151,2024-08-02,Northeast,Consumer,Store,Electronics,Wireless Headphones,1,171.14,0.0,171.14,114.55,45.63,Kept,,,,,,10.96
+DP-2024-00152,2024-08-24,Northeast,Small Business,Marketplace,Home & Kitchen,Desk Lamp,3,78.8,0.0,236.4,55.94,55.8,Kept,5,2,Credit Card,48,CLEARANCE,12.78
+DP-2024-00153,2024-11-23,Northeast,Corporate,Marketplace,Outdoor,Insulated Bottle,2,185.17,0.05,351.82,121.4,102.67,Kept,10,4,Debit Card,43,,6.35
+DP-2025-00154,2025-04-11,Northeast,Consumer,Marketplace,Outdoor,Insulated Bottle,2,16.53,0.1,29.75,10.44,-0.15,Kept,1,,Credit Card,56,CLEARANCE,9.02
+DP-2024-00155,2024-06-14,South,Consumer,Marketplace,Outdoor,Camping Lantern,4,16.73,0.15,56.88,11.18,0.25,Kept,1,3,Pay Later,18,CLEARANCE,11.91
+DP-2025-00156,2025-05-21,Midwest,Consumer,Store,Electronics,Webcam,4,41.39,0.05,157.28,29.27,36.34,Kept,4,,Credit Card,19,SPRING10,3.86
+DP-2025-00157,2025-11-22,South,Consumer,Store,Outdoor,Insulated Bottle,4,21.51,0.0,86.04,14.75,23.78,Kept,7,5,Credit Card,,,3.26
+DP-2025-00158,2025-06-12,South,Small Business,Store,Office,Ergonomic Chair,4,124.2,0.0,496.8,76.06,183.47,Kept,7,5,Debit Card,58,,9.09
+DP-2024-00159,2024-03-04,Midwest,Small Business,Online,Office,Ergonomic Chair,4,16.94,0.05,64.37,9.97,19.47,Kept,4,,,,,5.02
+DP-2024-00160,2024-08-21,Northeast,Small Business,Online,Office,Desk Organizer,1,68.16,0.0,68.16,43.26,13.02,Kept,10,,Credit Card,53,CLEARANCE,11.88
+DP-2024-00161,2024-12-25,West,Consumer,Marketplace,Home & Kitchen,Air Purifier,1,27.87,0.15,23.69,20.45,-5.03,Kept,8,,,59,NONE,8.27
+DP-2024-00162,2024-03-03,Midwest,Small Business,Store,Electronics,Smart Speaker,1,230.39,0.05,218.87,167.3,45.11,Kept,8,5,Digital Wallet,31,SPRING10,
+DP-2024-00163,2024-10-16,Midwest,Consumer,Store,Home & Kitchen,Coffee Maker,1,34.32,0.2,27.46,25.76,-6.11,Kept,4,3,Digital Wallet,56,SPRING10,7.81
+DP-2024-00164,2024-12-17,South,Small Business,Marketplace,Office,Ergonomic Chair,3,57.91,0.0,173.73,34.12,60.3,Kept,7,2,Pay Later,55,CLEARANCE,11.07
+DP-2024-00165,2024-09-20,Midwest,Corporate,Marketplace,Home & Kitchen,Air Purifier,2,184.57,0.0,369.14,141.45,74.39,Kept,,,Pay Later,,LOYAL15,11.85
+DP-2024-00166,2024-01-18,Northeast,Small Business,Marketplace,Outdoor,Insulated Bottle,1,95.63,0.0,95.63,60.99,30.14,Kept,6,4,Debit Card,,,4.5
+DP-2024-00167,2024-05-18,Northeast,Consumer,Online,Outdoor,Travel Backpack,4,31.27,0.0,125.08,20.38,38.68,Kept,5,,Pay Later,,NONE,4.88
+DP-2025-00168,2025-12-10,South,Consumer,Online,Electronics,Smart Speaker,4,176.64,0.05,671.23,125.4,162.8,Kept,9,,Debit Card,,NONE,6.83
+DP-2024-00169,2024-04-19,Midwest,Corporate,Online,Electronics,Smart Speaker,1,22.57,0.0,22.57,,-1.9,Kept,,,Credit Card,,NONE,9.8
+DP-2025-00170,2025-12-04,Midwest,Small Business,Store,Office,Notebook Set,2,58.54,0.15,99.52,36.94,11.98,Kept,9,,,25,,13.66
+DP-2024-00171,2024-12-02,Midwest,Small Business,Online,Electronics,Wireless Headphones,2,114.79,0.2,183.66,80.63,15.58,Kept,10,,,30,WELCOME,6.82
+DP-2025-00172,2025-09-04,South,Consumer,Online,Electronics,Smart Speaker,1,70.24,0.25,52.68,48.47,-6.68,Kept,10,5,Debit Card,63,,10.89
+DP-2025-00173,2025-06-19,West,Small Business,Marketplace,Electronics,Wireless Headphones,1,50.43,0.15,42.87,35.07,-2.03,Kept,1,,Credit Card,24,NONE,9.83
+DP-2024-00174,2024-08-08,South,Small Business,Online,Home & Kitchen,Desk Lamp,2,25.57,0.2,40.91,18.12,-7.68,Kept,7,,Pay Later,21,,12.35
+DP-2025-00175,2025-05-08,West,Consumer,Marketplace,Home & Kitchen,Desk Lamp,1,57.76,0.0,57.76,43.14,9.09,Kept,8,,Digital Wallet,32,,5.53
+DP-2024-00176,2024-07-19,Midwest,Small Business,Store,Outdoor,Camping Lantern,5,101.64,0.0,508.2,69.71,146.21,Kept,10,5,Digital Wallet,41,WELCOME,
+DP-2025-00177,2025-10-04,South,Small Business,Store,Office,Desk Organizer,1,124.76,0.1,112.28,79.38,28.33,Kept,10,2,Digital Wallet,,SPRING10,4.57
+DP-2025-00178,2025-08-27,South,Small Business,Marketplace,Office,Ergonomic Chair,1,22.99,0.0,22.99,14.96,1.02,Kept,8,1,Credit Card,,,7.01
+DP-2024-00179,2024-01-19,West,Small Business,Marketplace,Home & Kitchen,Desk Lamp,1,25.4,0.1,22.86,19.29,-10.01,,5,,,37,NONE,
+DP-2025-00180,2025-01-19,Northeast,Consumer,Marketplace,Outdoor,Travel Backpack,1,84.52,0.1,76.07,56.94,7.08,Kept,4,4,Debit Card,75,NONE,
+DP-2024-00181,2024-06-18,South,Small Business,Marketplace,Home & Kitchen,Desk Lamp,3,71.99,0.0,215.97,51.19,57.85,Kept,2,2,Pay Later,73,,4.55
+DP-2025-00182,2025-06-16,Northeast,Corporate,Marketplace,Home & Kitchen,Cookware Set,4,78.99,0.05,300.16,57.05,63.39,Kept,10,1,Debit Card,70,CLEARANCE,
+DP-2024-00183,2024-10-01,Midwest,Small Business,Marketplace,Electronics,Wireless Headphones,1,43.48,0.2,34.78,29.44,2.06,Kept,,3,,73,NONE,
+DP-2024-00184,2024-08-06,Midwest,Consumer,Online,Electronics,Smart Speaker,1,22.49,0.15,19.12,14.95,-10.86,Returned,1,5,Digital Wallet,72,SPRING10,11.59
+DP-2025-00185,2025-08-24,Midwest,Small Business,Marketplace,Outdoor,Picnic Blanket,4,65.51,0.1,235.84,43.7,55.62,Kept,2,2,Digital Wallet,54,LOYAL15,5.42
+DP-2025-00186,2025-09-07,Midwest,Consumer,Online,Home & Kitchen,Cookware Set,1,46.11,0.0,46.11,32.61,2.73,Kept,6,3,Digital Wallet,,WELCOME,10.77
+DP-2024-00187,2024-12-17,South,Corporate,Online,Office,Monitor Arm,2,75.52,0.0,151.04,49.1,47.26,Kept,4,4,Pay Later,,,5.58
+DP-2025-00188,2025-06-12,South,Consumer,Store,Home & Kitchen,Air Purifier,2,40.06,0.15,68.1,30.48,0.01,Kept,2,3,Pay Later,30,WELCOME,7.13
+DP-2024-00189,2024-05-20,West,Small Business,Store,Home & Kitchen,Cookware Set,3,233.88,0.0,701.64,176.29,162.06,Kept,7,,Pay Later,49,NONE,10.71
+DP-2025-00190,2025-01-17,West,Small Business,Store,Electronics,Laptop Stand,3,32.81,0.05,93.51,21.99,23.11,,3,,,,,4.43
+DP-2024-00191,2024-07-05,West,Small Business,Marketplace,Electronics,Wireless Headphones,5,32.91,0.3,115.18,23.05,-12.83,Kept,7,,Pay Later,47,CLEARANCE,12.76
+DP-2024-00192,2024-06-17,South,Corporate,Store,Home & Kitchen,Air Purifier,3,56.35,0.0,169.05,43.24,26.88,Kept,10,4,Credit Card,,SPRING10,12.45
+DP-2024-00193,2024-05-20,West,Consumer,Store,Home & Kitchen,Cookware Set,2,34.39,0.0,68.78,25.81,6.66,Kept,5,4,Debit Card,66,WELCOME,10.5
+DP-2024-00194,2024-05-07,West,Small Business,Online,Home & Kitchen,Air Purifier,2,87.77,0.0,175.54,67.46,32.29,Kept,8,,Credit Card,22,NONE,8.33
+DP-2024-00195,2024-09-05,Northeast,Small Business,Store,Home & Kitchen,Air Purifier,4,127.58,0.15,433.77,94.28,-24.73,Returned,8,,Debit Card,,LOYAL15,3.3
+DP-2025-00196,2025-06-03,South,Small Business,Marketplace,Electronics,Wireless Headphones,3,16.79,0.0,50.37,11.21,8.56,,4,5,Digital Wallet,,LOYAL15,8.18
+DP-2025-00197,2025-12-05,Midwest,Small Business,Store,Outdoor,Picnic Blanket,4,128.17,0.05,487.05,89.34,125.68,Kept,1,4,Debit Card,31,LOYAL15,4.01
+DP-2025-00198,2025-06-16,Northeast,,Marketplace,Outdoor,Camping Lantern,1,34.3,0.0,34.3,21.3,3.13,Kept,1,4,Debit Card,,,
+DP-2025-00199,2025-06-20,Midwest,Corporate,Marketplace,Home & Kitchen,Air Purifier,4,119.62,0.15,406.71,88.49,44.46,Kept,2,5,Digital Wallet,,,8.29
+DP-2024-00200,2024-03-13,Northeast,Consumer,Online,Outdoor,Picnic Blanket,4,71.46,0.0,285.84,44.98,96.11,,6,3,Debit Card,,WELCOME,9.81
+DP-2025-00201,2025-09-20,West,,Marketplace,Electronics,Wireless Headphones,4,17.08,0.0,68.32,11.9,9.3,Kept,,,Pay Later,22,NONE,11.42
+DP-2024-00202,2024-01-18,South,Corporate,Marketplace,Office,Monitor Arm,3,27.33,0.05,77.89,16.64,22.75,Kept,8,4,Digital Wallet,19,WELCOME,5.22
+DP-2025-00203,2025-02-24,Northeast,Corporate,Online,Outdoor,Travel Backpack,2,18.46,,36.92,11.7,5.02,Kept,2,,,33,,8.5
+DP-2024-00204,2024-04-11,Midwest,Consumer,Store,Office,Monitor Arm,3,85.3,0.0,255.9,51.08,,Kept,2,2,Pay Later,,,4.26
+DP-2024-00205,2024-08-06,West,Consumer,Store,Home & Kitchen,Desk Lamp,2,257.32,0.1,463.18,189.95,72.29,Kept,,5,,22,,10.99
+DP-2024-00206,2024-01-13,West,Consumer,Store,Office,Monitor Arm,5,21.38,,80.17,12.65,12.57,Kept,2,5,Digital Wallet,,WELCOME,
+DP-2024-00207,2024-09-12,Northeast,Corporate,Online,Outdoor,Camping Lantern,3,119.24,0.1,321.95,77.96,77.96,Kept,6,,,,WELCOME,
+DP-2025-00208,2025-12-04,West,Corporate,Online,Outdoor,Insulated Bottle,1,89.46,0.0,89.46,62.05,13.95,Kept,7,,Pay Later,,,13.46
+DP-2024-00209,2024-06-27,Midwest,Consumer,Online,Home & Kitchen,Air Purifier,2,57.54,,97.82,43.91,6.54,Kept,9,2,,,WELCOME,3.46
+DP-2024-00210,2024-11-12,Northeast,Small Business,Marketplace,Office,Desk Organizer,1,29.61,0.0,29.61,18.55,-0.21,Kept,2,3,Pay Later,19,,11.27
+DP-2025-00211,2025-09-03,Midwest,Consumer,Store,Outdoor,Insulated Bottle,3,29.98,0.05,85.44,20.18,4.48,Returned,3,,Pay Later,29,CLEARANCE,5.04
+DP-2025-00212,2025-03-04,West,Consumer,Marketplace,Electronics,Laptop Stand,3,49.57,0.2,118.97,36.03,4.98,Kept,,5,Credit Card,,,5.9
+DP-2024-00213,2024-12-05,South,Corporate,Online,Home & Kitchen,Coffee Maker,1,119.08,0.0,119.08,84.31,22.26,Kept,8,4,Credit Card,,,
+DP-2024-00214,2024-04-10,Northeast,Corporate,Store,Outdoor,Insulated Bottle,2,223.09,0.0,446.18,146.89,144.64,Kept,3,5,Digital Wallet,74,WELCOME,7.76
+DP-2024-00215,2024-08-13,South,Corporate,Online,Office,Monitor Arm,5,67.82,0.0,339.1,40.71,126.59,Kept,7,5,Debit Card,,,8.96
+DP-2025-00216,2025-02-18,Midwest,Corporate,Store,Outdoor,Insulated Bottle,3,190.72,0.1,514.94,124.58,133.4,Kept,5,4,Digital Wallet,32,,7.8
+DP-2025-00217,2025-02-06,Midwest,Corporate,,Outdoor,Travel Backpack,3,164.23,0.0,492.69,111.12,151.43,Kept,7,,Pay Later,28,WELCOME,7.9
+DP-2025-00218,2025-07-13,Midwest,Small Business,Store,Outdoor,Travel Backpack,1,153.38,0.0,153.38,104.56,41.97,Kept,4,5,,46,NONE,6.85
+DP-2024-00219,2024-11-09,Midwest,Small Business,Marketplace,Electronics,Laptop Stand,3,104.16,0.1,281.23,74.64,51.21,Kept,1,,Pay Later,,,
+DP-2024-00220,2024-05-05,South,Small Business,Store,Outdoor,Picnic Blanket,3,74.83,0.1,202.04,46.58,50.59,Kept,6,5,Debit Card,,CLEARANCE,11.71
+DP-2025-00221,2025-07-15,West,Small Business,Online,Office,Monitor Arm,1,48.98,0.3,34.29,31.66,-9.04,Kept,6,4,Debit Card,,,11.67
+DP-2024-00222,2024-08-06,South,Consumer,Online,Home & Kitchen,Cookware Set,1,18.48,0.25,13.86,13.71,-5.73,Kept,4,5,Debit Card,66,WELCOME,5.88
+DP-2025-00223,2025-12-09,,Consumer,Store,Electronics,Laptop Stand,3,23.93,0.0,71.79,16.81,7.75,Kept,,3,Digital Wallet,,NONE,13.61
+DP-2024-00224,2024-03-11,Midwest,,Online,Home & Kitchen,Desk Lamp,3,282.81,0.1,763.59,195.46,169.48,,3,,Digital Wallet,65,,7.73
+DP-2025-00225,2025-06-27,Northeast,Corporate,Online,Electronics,Smart Speaker,1,217.3,0.15,184.71,145.08,30.67,Kept,2,,,29,,8.96
+DP-2024-00226,2024-02-06,West,Small Business,Store,Office,Desk Organizer,1,95.28,0.2,76.22,61.3,5.11,Kept,,5,Digital Wallet,56,NONE,9.81
+DP-2025-00227,2025-07-19,West,Corporate,Online,Home & Kitchen,Coffee Maker,4,116.35,0.0,465.4,80.0,141.26,Kept,2,,Pay Later,,,4.14
+DP-2024-00228,2024-10-06,West,,Online,Electronics,Smart Speaker,1,87.17,0.3,61.02,56.59,-0.02,Kept,8,,,58,,4.45
+DP-2024-00229,2024-04-10,Northeast,Consumer,Store,Outdoor,Travel Backpack,2,29.14,0.0,58.28,18.18,8.12,Kept,5,5,Digital Wallet,18,,13.8
+DP-2024-00230,2024-09-08,Midwest,,Marketplace,Outdoor,Camping Lantern,2,281.33,0.2,450.13,188.19,69.15,Kept,4,,Digital Wallet,74,WELCOME,4.6
+DP-2025-00231,2025-05-19,Northeast,Corporate,Online,Outdoor,Travel Backpack,2,37.21,0.0,74.42,23.63,13.66,Kept,9,4,Digital Wallet,42,CLEARANCE,13.5
+DP-2024-00232,2024-04-21,West,Consumer,Marketplace,Office,Ergonomic Chair,1,125.32,0.0,125.32,,33.91,Kept,3,3,Debit Card,48,,
+DP-2024-00233,2024-10-16,West,Corporate,Store,Outdoor,Picnic Blanket,1,17.79,0.2,14.23,11.6,-2.8,Kept,1,,,,LOYAL15,5.43
+DP-2024-00234,2024-04-08,West,Corporate,Online,Office,Notebook Set,2,226.34,0.0,452.68,142.63,156.71,Kept,3,5,,,CLEARANCE,10.71
+DP-2025-00235,2025-02-10,,Corporate,Marketplace,Office,Ergonomic Chair,2,18.85,0.15,32.05,11.76,,Kept,6,5,Credit Card,,,
+DP-2025-00236,2025-08-19,South,Corporate,,Electronics,Webcam,4,25.01,0.0,100.04,17.02,20.42,Kept,10,,Debit Card,67,LOYAL15,11.54
+DP-2024-00237,2024-02-15,Northeast,Corporate,Marketplace,Electronics,Webcam,1,111.75,0.05,106.16,80.98,-0.05,Returned,,5,Debit Card,,SPRING10,
+DP-2025-00238,2025-03-22,Northeast,Small Business,Store,Home & Kitchen,Coffee Maker,1,79.48,0.0,79.48,55.34,17.71,Kept,9,,,34,WELCOME,6.43
+DP-2024-00239,2024-03-19,Midwest,,Marketplace,Office,Monitor Arm,1,138.49,0.2,110.79,85.88,13.94,Kept,,,Digital Wallet,,,
+DP-2024-00240,2024-04-24,West,Consumer,Store,Office,Ergonomic Chair,2,46.81,0.15,79.58,28.16,18.71,Kept,4,4,Credit Card,22,WELCOME,
+DP-2025-00241,2025-07-23,South,Corporate,Online,Home & Kitchen,Coffee Maker,3,150.87,0.1,407.35,104.39,89.26,Kept,5,4,,28,,4.92
+DP-2025-00242,2025-03-19,Midwest,Small Business,Online,Home & Kitchen,Coffee Maker,5,28.24,0.2,112.96,21.71,-8.42,Kept,,3,Credit Card,,SPRING10,12.83
+DP-2025-00243,2025-04-07,South,Consumer,Online,Outdoor,Travel Backpack,5,21.17,0.0,105.85,14.22,24.0,Kept,3,4,Digital Wallet,,NONE,10.75
+DP-2024-00244,2024-04-15,South,Consumer,Store,Outdoor,Insulated Bottle,3,274.91,0.2,659.78,183.02,106.23,Kept,1,5,,51,,4.49
+DP-2025-00245,2025-07-06,West,Small Business,Online,Office,Monitor Arm,2,23.42,0.1,42.16,14.68,6.8,Kept,,3,Pay Later,68,SPRING10,
+DP-2024-00246,2024-07-26,Midwest,Corporate,Online,Electronics,Laptop Stand,1,58.16,0.0,58.16,38.9,14.84,Kept,,,Digital Wallet,,,4.42
+DP-2025-00247,2025-07-15,South,Corporate,Online,Outdoor,Travel Backpack,1,23.31,0.2,18.65,15.41,-8.57,Kept,,5,Credit Card,23,,11.81
+DP-2025-00248,2025-10-08,South,Small Business,Marketplace,Outdoor,Insulated Bottle,1,42.56,0.0,42.56,27.82,1.51,Kept,8,,,60,CLEARANCE,13.23
+DP-2024-00249,2024-09-17,Midwest,,Marketplace,Electronics,Webcam,2,29.87,0.0,59.74,21.11,10.53,Kept,2,,Digital Wallet,57,,6.99
+DP-2025-00250,2025-02-21,Midwest,Corporate,Marketplace,Outdoor,Insulated Bottle,3,107.07,0.15,273.03,72.93,47.39,,7,4,Debit Card,42,,6.85
+DP-2025-00251,2025-06-16,West,Small Business,Online,Electronics,Laptop Stand,2,220.42,0.05,418.8,149.1,116.93,,1,3,,27,,3.67
+DP-2024-00252,2024-11-06,Northeast,Small Business,Online,Office,Desk Organizer,2,16.11,0.0,32.22,10.58,3.29,Kept,10,3,Credit Card,46,WELCOME,7.77
+DP-2024-00253,2024-10-25,West,Consumer,,Electronics,Laptop Stand,4,52.52,0.25,157.56,35.29,-25.93,Returned,7,,,37,NONE,13.97
+DP-2025-00254,2025-09-13,Midwest,Consumer,Store,Office,Notebook Set,2,185.07,0.1,333.13,121.0,77.37,Kept,4,5,Debit Card,56,CLEARANCE,13.76
+DP-2024-00255,2024-04-02,West,Small Business,Online,Office,Monitor Arm,1,128.49,0.1,115.64,83.91,21.15,Kept,7,,,38,WELCOME,10.58
+DP-2025-00256,2025-01-18,South,Corporate,Marketplace,Outdoor,Picnic Blanket,1,66.36,0.0,66.36,43.32,9.8,Kept,7,5,Digital Wallet,27,CLEARANCE,13.24
+DP-2024-00257,2024-01-19,West,Small Business,Online,Office,Notebook Set,2,72.42,0.1,130.36,46.19,24.78,Kept,9,,Pay Later,18,LOYAL15,13.2
+DP-2025-00258,2025-07-27,Northeast,Corporate,Store,Outdoor,Insulated Bottle,2,19.8,0.15,33.66,12.47,5.35,Kept,6,,Debit Card,67,,3.37
+DP-2025-00259,2025-05-04,Northeast,Small Business,Store,Electronics,Smart Speaker,2,24.56,0.05,46.66,17.21,-0.52,Kept,10,,Pay Later,45,CLEARANCE,12.76
+DP-2024-00260,2024-12-23,Northeast,Consumer,Store,Office,Monitor Arm,1,131.58,0.05,125.0,80.22,38.59,Kept,,2,Credit Card,23,,6.19
+DP-2024-00261,2024-11-27,Northeast,Consumer,Online,Electronics,Laptop Stand,1,47.68,0.0,47.68,33.84,2.72,Kept,5,5,Debit Card,,WELCOME,
+DP-2024-00262,2024-11-07,West,Consumer,Store,Home & Kitchen,Coffee Maker,3,18.21,0.05,51.9,12.81,3.18,Kept,2,,,68,,10.29
+DP-2025-00263,2025-01-25,South,Small Business,Store,Electronics,Laptop Stand,4,40.78,0.1,146.81,29.18,20.5,Kept,7,4,Digital Wallet,,NONE,9.59
+DP-2024-00264,2024-06-21,Northeast,,Marketplace,Office,Notebook Set,5,124.69,0.0,623.45,,244.9,Kept,4,2,,,,7.4
+DP-2024-00265,2024-03-17,West,Small Business,Online,Outdoor,Camping Lantern,2,24.8,0.1,44.64,17.16,-1.25,Kept,6,3,Credit Card,18,SPRING10,
+DP-2025-00266,2025-12-02,South,Consumer,Store,Electronics,Laptop Stand,1,81.97,0.0,81.97,53.5,19.76,Kept,4,3,,29,NONE,
+DP-2024-00267,2024-03-27,Midwest,Corporate,Marketplace,Home & Kitchen,Air Purifier,1,80.8,0.0,80.8,58.78,17.95,Kept,2,5,Debit Card,32,,4.07
+DP-2025-00268,2025-05-17,West,Consumer,Online,Electronics,Smart Speaker,1,35.8,0.1,32.22,23.34,-2.35,Kept,5,5,Debit Card,,,11.23
+DP-2024-00269,2024-11-15,Midwest,Consumer,Store,Office,Notebook Set,4,267.39,0.05,1016.08,163.39,348.94,Kept,,,Digital Wallet,61,WELCOME,13.58
+DP-2025-00270,2025-02-07,West,Corporate,Online,Outdoor,Camping Lantern,1,41.91,0.2,33.53,27.96,1.23,Kept,4,5,,,CLEARANCE,4.34
+DP-2024-00271,2024-06-25,Northeast,Small Business,Online,Outdoor,Insulated Bottle,5,268.33,0.05,1274.57,172.54,401.29,Kept,,3,Credit Card,,LOYAL15,10.58
+DP-2024-00272,2024-12-14,Northeast,,Marketplace,Electronics,Wireless Headphones,2,20.71,0.0,41.42,14.18,0.39,Kept,4,2,Pay Later,33,NONE,12.67
+DP-2024-00273,2024-02-13,West,Consumer,Marketplace,Home & Kitchen,Desk Lamp,2,23.79,0.05,45.2,18.1,-4.86,Kept,,,Debit Card,31,,13.86
+DP-2024-00274,2024-11-13,Midwest,Small Business,Store,Electronics,Laptop Stand,5,17.13,0.1,77.08,11.7,7.78,Kept,8,5,Digital Wallet,,SPRING10,10.8
+DP-2025-00275,2025-12-08,Midwest,Small Business,Store,Office,Desk Organizer,4,27.41,0.0,109.64,16.6,37.54,Kept,5,2,Debit Card,66,LOYAL15,5.7
+DP-2024-00276,2024-08-25,Northeast,Corporate,Store,Home & Kitchen,Coffee Maker,5,126.01,0.0,630.05,95.62,148.44,Kept,9,,Pay Later,,,
+DP-2025-00277,2025-03-15,West,Corporate,Marketplace,Home & Kitchen,Cookware Set,2,95.83,0.1,172.49,72.92,17.1,,,,Credit Card,31,NONE,9.55
+DP-2024-00278,2024-11-19,South,Consumer,Online,Electronics,Wireless Headphones,2,115.63,0.2,185.01,83.88,9.71,Kept,2,,Pay Later,37,SPRING10,7.54
+DP-2025-00279,2025-12-15,Northeast,Corporate,Marketplace,Outdoor,Picnic Blanket,3,209.42,0.0,628.26,136.06,212.01,Kept,,4,Debit Card,,,8.07
+DP-2024-00280,2024-04-12,West,Consumer,Marketplace,Electronics,Laptop Stand,2,64.64,0.05,122.82,43.98,25.29,Kept,8,,Digital Wallet,28,,9.57
+DP-2024-00281,2024-03-15,Midwest,Consumer,Store,Outdoor,Picnic Blanket,2,28.9,0.1,52.02,20.09,4.38,Kept,1,,,51,NONE,7.46
+DP-2025-00282,2025-12-07,Northeast,Corporate,Online,Home & Kitchen,Air Purifier,5,69.54,0.1,312.93,49.57,54.32,Kept,9,4,Debit Card,67,,10.76
+DP-2025-00283,2025-06-21,South,Small Business,Marketplace,Electronics,Webcam,4,107.55,,387.18,74.18,82.95,Kept,1,5,,23,NONE,7.51
+DP-2025-00284,2025-08-23,Northeast,Small Business,Store,Office,Monitor Arm,5,111.51,0.05,529.67,72.45,160.41,,10,,,,CLEARANCE,7.01
+DP-2024-00285,2024-01-08,West,Corporate,Store,Outdoor,Picnic Blanket,1,115.15,0.2,92.12,75.7,6.31,Kept,2,,Debit Card,48,LOYAL15,
+DP-2025-00286,2025-10-03,South,,Online,Home & Kitchen,Cookware Set,4,26.18,0.05,99.48,19.28,-8.65,Returned,9,,Digital Wallet,62,,
+DP-2025-00287,2025-11-17,Northeast,Corporate,Store,Home & Kitchen,Desk Lamp,2,249.9,0.25,374.85,187.47,-10.27,Kept,,,,62,,
+DP-2025-00288,2025-10-27,Northeast,Corporate,Marketplace,Electronics,Smart Speaker,1,17.83,0.0,17.83,11.73,-2.28,Kept,9,1,Pay Later,,SPRING10,8.38
+DP-2024-00289,2024-09-20,South,Small Business,Online,Office,Desk Organizer,2,32.84,0.2,52.54,21.26,-1.51,Kept,2,5,Credit Card,34,LOYAL15,11.53
+DP-2025-00290,2025-11-09,,Consumer,Online,Home & Kitchen,Desk Lamp,1,106.11,0.0,106.11,81.52,13.43,Kept,8,1,Digital Wallet,70,WELCOME,11.16
+DP-2024-00291,2024-02-25,Northeast,Small Business,Online,Outdoor,Camping Lantern,1,277.76,0.0,277.76,191.74,31.11,Returned,1,4,Debit Card,29,,
+DP-2024-00292,2024-02-26,Midwest,Corporate,Store,Outdoor,Travel Backpack,1,-12.5,0.15,68.9,51.14,13.48,Kept,5,1,Pay Later,33,SPRING10,4.28
+DP-2024-00293,2024-01-27,South,Small Business,Store,Outdoor,Insulated Bottle,1,30.88,0.2,24.7,19.93,-6.46,Kept,2,5,Pay Later,54,,11.23
+DP-2025-00294,2025-07-17,Midwest,,Online,Outdoor,Insulated Bottle,3,268.21,0.05,764.4,169.03,246.34,Kept,10,4,Credit Card,,WELCOME,10.97
+DP-2024-00295,2024-12-10,South,Consumer,Online,Home & Kitchen,Coffee Maker,3,41.17,0.0,123.51,30.55,28.79,Kept,8,,,,LOYAL15,3.07
+DP-2024-00296,2024-01-08,South,Consumer,Store,Electronics,Webcam,4,33.96,0.0,135.84,23.26,39.41,Kept,9,,Pay Later,,NONE,
+DP-2025-00297,2025-04-23,Northeast,Consumer,Store,Outdoor,Picnic Blanket,1,20.19,0.25,15.14,13.6,-3.4,Kept,8,3,,,NONE,4.94
+DP-2025-00298,2025-01-09,Northeast,Small Business,Store,Electronics,Laptop Stand,2,279.65,0.1,503.37,185.87,30.56,Returned,7,4,,66,,10.46
+DP-2025-00299,2025-07-23,South,,Online,Office,Ergonomic Chair,1,127.88,0.2,102.3,80.38,14.7,Kept,2,,Debit Card,,,7.22
+DP-2024-00300,2024-06-20,Northeast,Small Business,Marketplace,Outdoor,Picnic Blanket,1,81.03,0.0,81.03,55.09,13.9,Kept,4,5,Credit Card,,SPRING10,
+DP-2025-00301,2025-04-05,Midwest,Corporate,Marketplace,Home & Kitchen,Desk Lamp,2,21.45,,42.9,16.33,2.74,Kept,,4,Pay Later,54,,7.5
+DP-2024-00302,2024-07-12,Midwest,Consumer,Marketplace,Office,Desk Organizer,1,34.05,0.0,34.05,20.37,1.89,Kept,9,5,Credit Card,68,NONE,11.79
+DP-2025-00303,2025-05-17,West,Consumer,Online,Home & Kitchen,Cookware Set,1,21.42,0.0,21.42,16.06,-0.53,Kept,5,5,Pay Later,19,WELCOME,5.89
+DP-2024-00304,2024-08-25,Northeast,Corporate,Marketplace,Home & Kitchen,Coffee Maker,1,28.59,0.25,21.44,19.71,-7.31,Kept,1,3,Debit Card,64,,
+DP-2025-00305,2025-06-23,West,Consumer,Store,Home & Kitchen,Desk Lamp,2,73.63,0.0,147.26,50.91,40.06,Kept,8,,Digital Wallet,,LOYAL15,5.38
+DP-2024-00306,2024-12-18,South,Consumer,Store,Home & Kitchen,Coffee Maker,2,21.9,0.0,43.8,15.66,8.12,Kept,2,,Digital Wallet,,SPRING10,
+DP-2024-00307,2024-03-24,Midwest,Corporate,Store,Outdoor,Picnic Blanket,3,157.97,0.0,473.91,99.27,171.42,Kept,8,,,69,SPRING10,4.68
+DP-2025-00308,2025-07-17,South,Small Business,Online,Office,Desk Organizer,5,23.16,0.0,115.8,14.61,29.01,Kept,7,,Credit Card,,,13.74
+DP-2025-00309,2025-02-20,Northeast,Consumer,Marketplace,Outdoor,Camping Lantern,1,102.4,0.05,97.28,64.88,29.34,Kept,7,,Digital Wallet,,CLEARANCE,3.06
+DP-2024-00310,2024-07-14,West,Corporate,Store,Outdoor,Insulated Bottle,4,22.63,0.25,67.89,15.53,-1.28,Kept,10,,Debit Card,51,SPRING10,7.05
+DP-2024-00311,2024-10-06,Midwest,Small Business,Marketplace,Outdoor,Picnic Blanket,4,25.65,0.1,92.34,17.02,11.55,Kept,,,Digital Wallet,,LOYAL15,12.71
+DP-2025-00312,2025-01-10,South,Corporate,Marketplace,Home & Kitchen,Air Purifier,1,183.94,0.0,183.94,141.31,30.08,Kept,5,5,Debit Card,54,,
+DP-2025-00313,2025-09-25,West,Small Business,Marketplace,Outdoor,Camping Lantern,4,171.72,0.0,686.88,116.17,211.94,Kept,4,3,Digital Wallet,58,NONE,10.26
+DP-2025-00314,2025-12-13,Midwest,Consumer,Store,Outdoor,Camping Lantern,1,54.97,0.25,41.23,35.78,-4.25,Kept,1,5,Digital Wallet,26,,9.7
+DP-2025-00315,2025-08-15,West,Small Business,Marketplace,Electronics,Laptop Stand,4,32.03,0.0,128.12,23.15,31.67,Kept,2,1,Debit Card,,,3.85
+DP-2025-00316,2025-11-10,Northeast,Corporate,Marketplace,Home & Kitchen,Desk Lamp,1,40.13,0.05,38.12,30.95,2.91,Kept,,5,,,NONE,4.26
+DP-2025-00317,2025-04-08,Midwest,Small Business,Marketplace,Outdoor,Picnic Blanket,2,66.38,0.0,132.76,45.44,35.57,Kept,,2,Debit Card,,,6.31
+DP-2024-00318,2024-03-07,South,,Online,Office,Desk Organizer,1,15.67,0.25,11.75,9.43,-9.67,Kept,4,4,,,NONE,11.99
+DP-2024-00319,2024-05-22,Midwest,Small Business,Store,Outdoor,Insulated Bottle,2,21.22,0.05,40.32,13.3,4.6,Kept,,3,Credit Card,35,,9.12
+DP-2024-00320,2024-01-09,West,Consumer,Marketplace,Home & Kitchen,Air Purifier,1,32.55,0.0,32.55,24.91,3.27,Kept,9,,Credit Card,51,CLEARANCE,4.37
+DP-2025-00321,2025-10-15,Northeast,Small Business,Online,Office,Desk Organizer,4,218.5,0.1,786.6,134.34,241.78,Kept,10,4,Digital Wallet,72,CLEARANCE,7.46
+DP-2024-00322,2024-03-09,West,Corporate,Online,Home & Kitchen,Coffee Maker,5,80.98,0.3,283.43,61.17,-27.73,Kept,8,3,Digital Wallet,53,,5.31
+DP-2025-00323,2025-02-26,South,Corporate,Marketplace,Electronics,Wireless Headphones,1,106.62,0.1,95.96,70.08,21.48,Kept,3,4,Digital Wallet,58,CLEARANCE,4.4
+DP-2024-00324,2024-12-13,Northeast,Corporate,Marketplace,Office,Notebook Set,1,89.67,0.1,80.7,55.12,22.1,Kept,10,5,,61,LOYAL15,3.48
+DP-2024-00325,2024-01-14,Midwest,Consumer,,Outdoor,Picnic Blanket,1,155.48,0.0,155.48,106.12,45.99,Kept,1,2,Credit Card,27,,3.37
+DP-2024-00326,2024-10-02,West,Small Business,Store,Home & Kitchen,Air Purifier,5,175.5,0.1,789.75,128.03,136.4,Kept,2,,Pay Later,34,NONE,13.2
+DP-2025-00327,2025-04-16,Northeast,Consumer,Store,Electronics,Smart Speaker,3,41.97,0.1,113.32,28.03,16.44,Kept,9,,Credit Card,60,NONE,
+DP-2025-00328,2025-06-26,Midwest,Consumer,Marketplace,Home & Kitchen,Air Purifier,1,30.0,0.15,25.5,22.0,-10.35,Kept,6,4,Pay Later,71,NONE,13.85
+DP-2025-00329,2025-07-12,West,Small Business,Store,Outdoor,Insulated Bottle,3,40.04,0.2,96.1,25.69,12.33,Kept,,4,Credit Card,55,WELCOME,
+DP-2024-00330,2024-11-25,Midwest,Small Business,Online,Home & Kitchen,Cookware Set,5,41.27,0.2,165.08,28.39,14.21,Kept,8,3,Digital Wallet,,,8.92
+DP-2025-00331,2025-10-26,Midwest,Consumer,Online,Outdoor,Picnic Blanket,2,108.95,0.1,196.11,67.93,47.68,Kept,3,5,Debit Card,21,LOYAL15,12.57
+DP-2024-00332,2024-07-10,Northeast,Small Business,Store,Electronics,Wireless Headphones,2,173.99,0.25,260.99,118.98,12.42,Kept,4,4,Digital Wallet,,LOYAL15,
+DP-2025-00333,2025-05-07,Northeast,Corporate,Marketplace,Home & Kitchen,Desk Lamp,3,95.91,0.0,287.73,70.79,70.32,Kept,4,,Pay Later,61,WELCOME,5.04
+DP-2024-00334,2024-05-08,South,Corporate,Store,Home & Kitchen,Air Purifier,1,20.12,0.1,18.11,14.53,-0.21,Kept,,5,Debit Card,57,WELCOME,3.79
+DP-2025-00335,2025-09-10,West,Small Business,Store,Outdoor,Camping Lantern,4,49.28,0.25,147.84,32.44,11.6,Kept,1,,Debit Card,,LOYAL15,6.48
+DP-2025-00336,2025-02-04,Midwest,Consumer,Marketplace,Home & Kitchen,Cookware Set,1,23.73,0.15,20.17,17.03,-0.1,Kept,5,5,,60,,3.24
+DP-2025-00337,2025-01-17,West,Corporate,Marketplace,Home & Kitchen,Air Purifier,2,67.1,0.0,134.2,48.05,32.07,Kept,7,4,,20,SPRING10,6.03
+DP-2025-00338,2025-12-19,Northeast,Consumer,Store,Office,Ergonomic Chair,2,252.79,0.1,455.02,165.8,113.77,Kept,5,,,,SPRING10,9.65
+DP-2025-00339,2025-02-01,West,Consumer,Store,Office,Desk Organizer,1,141.32,0.1,127.19,83.11,39.3,Kept,7,3,Digital Wallet,53,,4.78
+DP-2025-00340,2025-12-05,Midwest,Corporate,Store,Office,Ergonomic Chair,3,115.61,0.05,329.49,75.34,97.25,Kept,6,5,,57,WELCOME,6.22
+DP-2025-00341,2025-12-25,West,Small Business,Marketplace,Office,Notebook Set,1,38.82,0.0,38.82,24.19,-5.89,Returned,9,,Credit Card,54,CLEARANCE,13.53
+DP-2025-00342,2025-08-21,Northeast,Consumer,Online,Office,Monitor Arm,5,108.27,0.2,433.08,69.71,76.24,Kept,8,,Credit Card,37,,8.29
+DP-2025-00343,2025-08-23,Northeast,Consumer,Store,Electronics,Laptop Stand,1,29.34,0.0,29.34,20.62,3.7,Kept,4,,Digital Wallet,50,NONE,5.02
+DP-2025-00344,2025-05-23,Midwest,Corporate,Marketplace,Home & Kitchen,Air Purifier,5,39.7,0.05,188.57,30.71,24.3,Kept,5,,Digital Wallet,41,SPRING10,10.72
+DP-2025-00345,2025-06-01,Northeast,Consumer,Marketplace,Home & Kitchen,Desk Lamp,4,116.85,0.0,467.4,81.71,132.86,Kept,7,,Debit Card,37,,7.7
+DP-2024-00346,2024-05-22,Midwest,Small Business,Store,Home & Kitchen,Air Purifier,2,244.16,0.15,415.07,170.13,71.24,Kept,6,5,Debit Card,46,,3.57
+DP-2025-00347,2025-12-14,West,Small Business,Marketplace,Electronics,Wireless Headphones,4,158.23,0.0,632.92,108.27,190.96,Kept,1,,Credit Card,54,,8.88
+DP-2025-00348,2025-10-09,Northeast,Small Business,Marketplace,Outdoor,Insulated Bottle,5,21.52,0.0,107.6,13.7,26.35,Kept,,,Debit Card,,LOYAL15,12.75
+DP-2025-00349,2025-10-24,South,Consumer,Marketplace,Home & Kitchen,Cookware Set,1,75.74,0.1,68.17,55.76,0.85,Kept,1,4,Pay Later,,NONE,11.56
+DP-2025-00350,2025-09-13,South,Small Business,Marketplace,Home & Kitchen,Air Purifier,3,79.96,0.05,227.89,58.99,37.93,Kept,,,Digital Wallet,72,,12.99
+DP-2024-00351,2024-02-07,,Small Business,Marketplace,Home & Kitchen,Air Purifier,1,151.65,0.05,144.07,113.46,21.5,Kept,7,,Credit Card,23,SPRING10,9.11
+DP-2024-00352,2024-09-10,Northeast,Small Business,Online,Outdoor,Picnic Blanket,1,64.18,0.15,54.55,42.69,1.03,Kept,,3,,18,,
+DP-2025-00353,2025-11-07,Midwest,Small Business,Online,Electronics,Smart Speaker,1,31.1,0.1,27.99,22.42,-4.59,Kept,4,3,Credit Card,,,10.16
+DP-2024-00354,2024-02-11,West,Consumer,Online,Office,Monitor Arm,1,223.65,0.25,167.74,135.58,22.96,Kept,3,4,Pay Later,,CLEARANCE,
+DP-2025-00355,2025-05-27,South,Corporate,Online,Office,Notebook Set,4,121.84,0.3,341.15,72.02,43.52,Kept,7,1,Digital Wallet,37,LOYAL15,9.55
+DP-2024-00356,2024-11-12,Midwest,Small Business,Online,Electronics,Wireless Headphones,2,80.63,0.1,145.13,53.38,32.61,Kept,8,,Credit Card,,WELCOME,5.76
+DP-2024-00357,2024-08-21,Midwest,Consumer,Online,Home & Kitchen,Desk Lamp,3,24.04,0.2,57.7,18.52,-6.31,Kept,,4,Debit Card,,,8.45
+DP-2025-00358,2025-11-11,West,Small Business,Online,Home & Kitchen,Coffee Maker,1,17.56,0.0,17.56,12.92,-1.24,Kept,8,4,Digital Wallet,,,5.88
+DP-2025-00359,2025-05-21,West,Corporate,Online,Home & Kitchen,Cookware Set,2,219.28,0.05,416.63,159.9,14.99,Returned,2,4,Pay Later,49,,6.85
+DP-2025-00360,2025-05-13,Northeast,Consumer,Marketplace,Office,Desk Organizer,4,258.26,0.0,1033.04,167.03,352.94,Kept,7,,Debit Card,,LOYAL15,
+DP-2024-00361,2024-03-07,West,Consumer,Marketplace,Outdoor,Picnic Blanket,4,18.56,0.0,74.24,12.46,20.34,Kept,6,4,,69,,4.06
+DP-2024-00362,2024-06-19,South,,Marketplace,Home & Kitchen,Air Purifier,5,30.54,0.25,114.52,22.29,-7.78,Kept,9,5,Credit Card,,,10.85
+DP-2024-00363,2024-01-04,South,Small Business,Online,Electronics,Smart Speaker,4,111.39,0.15,378.73,73.3,72.03,Kept,6,3,Pay Later,,CLEARANCE,13.5
+DP-2024-00364,2024-12-25,West,Small Business,Online,Home & Kitchen,Coffee Maker,4,38.22,0.1,137.59,26.79,23.92,Kept,9,,,32,SPRING10,6.51
+DP-2024-00365,2024-04-21,,Corporate,Marketplace,Outdoor,Travel Backpack,2,103.66,0.0,207.32,65.08,69.96,Kept,,2,Debit Card,,,7.2
+DP-2024-00366,2024-06-02,Northeast,Corporate,Marketplace,Office,Notebook Set,1,32.85,0.05,31.21,20.46,4.56,Kept,10,,Digital Wallet,,,6.19
+DP-2025-00367,2025-11-17,Midwest,Small Business,Online,Electronics,Wireless Headphones,5,55.36,0.25,207.6,38.29,10.58,Kept,3,5,,46,WELCOME,5.57
+DP-2025-00368,2025-07-03,Midwest,Small Business,Store,Electronics,Smart Speaker,1,27.12,0.0,27.12,19.15,-4.21,Kept,4,5,Debit Card,,WELCOME,
+DP-2024-00369,2024-03-24,Midwest,Consumer,Online,Outdoor,Camping Lantern,2,98.9,0.05,187.91,66.69,40.94,Kept,6,3,Digital Wallet,,,13.59
+DP-2024-00370,2024-11-24,Midwest,Consumer,Store,Outdoor,Insulated Bottle,1,261.92,0.1,235.73,163.72,58.26,Kept,10,5,Pay Later,71,LOYAL15,13.75
+DP-2024-00371,2024-08-07,Midwest,,Store,Home & Kitchen,Cookware Set,1,140.22,0.0,140.22,103.0,30.13,Kept,7,,Digital Wallet,50,CLEARANCE,7.09
+DP-2024-00372,2024-11-12,Midwest,Corporate,Store,Office,Monitor Arm,1,136.92,0.0,136.92,80.97,46.68,Kept,1,4,Debit Card,,SPRING10,9.27
+DP-2024-00373,2024-09-20,West,Consumer,Online,Electronics,Webcam,2,49.08,0.05,93.25,32.66,24.13,Kept,10,,Credit Card,,CLEARANCE,3.8
+DP-2024-00374,2024-09-04,Midwest,Corporate,Store,Outdoor,Travel Backpack,2,48.92,0.0,97.84,33.32,23.31,,7,5,Digital Wallet,27,,
+DP-2025-00375,2025-12-02,Midwest,Small Business,Online,Outdoor,Travel Backpack,2,20.01,0.0,40.02,13.71,5.62,,5,5,Digital Wallet,71,,6.98
+DP-2025-00376,2025-04-20,South,Small Business,Online,Office,Monitor Arm,1,25.21,0.2,20.17,15.62,-8.21,Kept,3,,Digital Wallet,,,
+DP-2025-00377,2025-12-19,Northeast,Corporate,Store,Outdoor,Picnic Blanket,1,128.03,0.25,96.02,81.44,0.78,Kept,,,Pay Later,49,LOYAL15,13.8
+DP-2024-00378,2024-02-23,Northeast,Consumer,Online,Office,Monitor Arm,1,49.86,0.25,37.39,31.68,-1.93,Kept,,,Credit Card,31,CLEARANCE,7.64
+DP-2025-00379,2025-07-04,West,Consumer,Store,Home & Kitchen,Desk Lamp,4,40.62,0.05,154.36,27.9,34.92,Kept,8,2,Digital Wallet,57,SPRING10,7.84
+DP-2025-00380,2025-01-24,Midwest,Corporate,Store,Electronics,Laptop Stand,4,172.57,0.1,621.25,116.69,150.63,Kept,,,Pay Later,69,,3.86
+DP-2024-00381,2024-07-14,Midwest,Consumer,Online,Outdoor,Travel Backpack,3,57.81,0.0,173.43,37.48,48.04,Kept,4,4,Pay Later,28,,12.95
+DP-2025-00382,2025-06-07,Midwest,Consumer,Marketplace,Office,Monitor Arm,1,118.47,0.05,112.55,69.4,34.79,Kept,7,3,Digital Wallet,29,SPRING10,8.36
+DP-2025-00383,2025-02-14,Midwest,Small Business,Online,Home & Kitchen,Coffee Maker,1,183.98,0.0,183.98,136.37,40.83,Kept,7,1,Credit Card,61,,6.78
+DP-2024-00384,2024-02-12,Midwest,Small Business,Online,Office,Desk Organizer,3,18.35,0.2,44.04,11.96,-3.6,Kept,4,4,Pay Later,51,,11.76
+DP-2024-00385,2024-06-09,South,Small Business,Store,Office,Ergonomic Chair,1,57.18,0.0,57.18,36.5,,Kept,7,4,Pay Later,24,LOYAL15,6.7
+DP-2024-00386,2024-03-19,West,Consumer,Marketplace,Office,Desk Organizer,2,53.93,0.05,102.47,35.43,20.21,Kept,,,Digital Wallet,,,11.4
+DP-2025-00387,2025-12-08,Midwest,Consumer,Online,Home & Kitchen,Air Purifier,4,165.45,0.1,595.62,118.11,119.0,Kept,7,,,,,4.18
+DP-2025-00388,2025-09-11,Midwest,Consumer,Marketplace,Electronics,Smart Speaker,4,217.48,0.1,782.93,148.64,41.95,Returned,8,5,Debit Card,42,,
+DP-2024-00389,2024-02-14,West,Corporate,Store,Home & Kitchen,Air Purifier,1,33.91,0.15,28.82,26.2,-4.82,Kept,6,4,Digital Wallet,,SPRING10,7.44
+DP-2025-00390,2025-02-18,Midwest,Corporate,Online,Outdoor,Camping Lantern,1,53.09,0.05,50.44,35.12,1.46,Kept,8,3,Debit Card,,,13.86
+DP-2024-00391,2024-10-18,Midwest,Consumer,Store,Outdoor,Travel Backpack,1,49.72,0.05,47.23,32.18,0.91,Returned,4,,Credit Card,64,CLEARANCE,5.64
+DP-2025-00392,2025-11-06,Northeast,Small Business,Online,Outdoor,Travel Backpack,5,41.72,0.05,198.17,27.61,20.21,Returned,4,5,Credit Card,,LOYAL15,4.24
+DP-2025-00393,2025-11-10,Midwest,Corporate,Online,Outdoor,Picnic Blanket,4,46.13,0.05,175.29,28.72,47.54,Kept,,3,Pay Later,19,,12.87
+DP-2025-00394,2025-03-05,Midwest,Corporate,Marketplace,Electronics,Wireless Headphones,2,86.88,0.1,156.38,58.16,34.23,Kept,7,1,Credit Card,,CLEARANCE,
+DP-2024-00395,2024-03-11,South,Corporate,Store,Outdoor,Insulated Bottle,2,103.45,0.1,186.21,69.34,37.85,Kept,3,,Debit Card,38,CLEARANCE,9.68
+DP-2025-00396,2025-10-22,Northeast,Small Business,Online,Office,Desk Organizer,1,227.68,0.0,227.68,148.98,75.24,Kept,,,Pay Later,,WELCOME,3.46
+DP-2024-00397,2024-02-16,Northeast,Consumer,Store,Office,Ergonomic Chair,1,79.07,,79.07,51.61,22.23,Kept,,,Credit Card,,WELCOME,5.23
+DP-2025-00398,2025-05-15,West,Corporate,Store,Electronics,Wireless Headphones,1,18.69,0.15,15.89,12.97,-3.72,Kept,,4,Debit Card,60,LOYAL15,
+DP-2025-00399,2025-10-11,Northeast,Corporate,Marketplace,Outdoor,Camping Lantern,1,207.34,0.05,196.97,131.4,53.54,Kept,10,,Pay Later,,LOYAL15,
+DP-2025-00400,2025-04-18,West,Consumer,Store,Outdoor,Insulated Bottle,4,20.96,0.05,79.65,14.56,7.7,,8,5,Pay Later,,WELCOME,13.71
+DP-2024-00401,2024-07-12,West,Consumer,Marketplace,Home & Kitchen,Desk Lamp,1,127.59,0.1,114.83,87.64,18.58,Kept,2,,Debit Card,,,8.61
+DP-2024-00402,2024-10-24,Midwest,Corporate,Marketplace,Outdoor,Picnic Blanket,5,178.11,0.0,890.55,118.05,288.39,Kept,8,,Credit Card,50,,11.91
+DP-2025-00403,2025-10-11,,Small Business,Online,Outdoor,Insulated Bottle,2,129.8,0.0,259.6,84.18,41.31,Returned,4,5,Credit Card,52,,3.2
+DP-2025-00404,2025-08-04,Northeast,Small Business,Store,Office,Monitor Arm,1,84.33,0.05,80.11,52.87,15.85,Kept,,,Digital Wallet,60,,11.39
+DP-2025-00405,2025-02-21,Northeast,Consumer,Store,Home & Kitchen,Coffee Maker,2,76.57,0.1,137.83,54.87,15.41,Kept,5,1,Debit Card,34,WELCOME,12.68
+DP-2025-00406,2025-07-12,South,Consumer,Marketplace,Electronics,Laptop Stand,1,20.35,0.3,14.24,13.21,-3.38,Kept,5,,Debit Card,32,,4.41
+DP-2025-00407,2025-11-26,West,Small Business,Online,Home & Kitchen,Air Purifier,5,159.45,0.05,757.39,121.55,135.91,Kept,,,,61,WELCOME,
+DP-2024-00408,2024-01-25,West,Small Business,Marketplace,Outdoor,Travel Backpack,2,166.13,0.05,315.65,107.61,96.14,Kept,,4,,66,NONE,4.29
+DP-2025-00409,2025-07-06,Northeast,,Online,Office,Desk Organizer,2,57.88,0.0,115.76,35.27,41.74,Kept,2,3,Pay Later,,LOYAL15,3.48
+DP-2024-00410,2024-09-11,Northeast,Consumer,,Home & Kitchen,Air Purifier,5,29.06,0.05,138.03,21.77,24.99,Kept,6,4,,21,,4.19
+DP-2024-00411,2024-10-22,Midwest,Corporate,Marketplace,Office,Notebook Set,1,161.2,0.05,153.14,99.82,39.44,Kept,,5,Digital Wallet,,SPRING10,
+DP-2025-00412,2025-10-17,South,Small Business,Online,Home & Kitchen,Air Purifier,3,34.24,0.0,102.72,25.13,15.84,Kept,9,,Debit Card,61,NONE,11.49
+DP-2024-00413,2024-03-10,West,Corporate,Marketplace,Electronics,Wireless Headphones,1,85.67,0.1,77.1,57.65,8.38,Kept,,4,,,,11.07
+DP-2024-00414,2024-03-09,South,Corporate,Online,Electronics,Wireless Headphones,4,18.91,0.1,68.08,13.6,4.7,Kept,9,3,Digital Wallet,29,LOYAL15,8.98
+DP-2024-00415,2024-09-24,Midwest,Consumer,Store,Electronics,Smart Speaker,1,124.32,0.05,118.1,89.24,24.62,Kept,2,5,Pay Later,28,,4.24
+DP-2025-00416,2025-07-27,Northeast,Small Business,Marketplace,Outdoor,Camping Lantern,5,17.48,0.0,87.4,10.96,20.48,Kept,10,4,Credit Card,34,,12.12
+DP-2025-00417,2025-12-19,West,Corporate,Online,Office,Monitor Arm,1,264.77,0.25,198.58,167.42,22.63,Kept,1,,Credit Card,74,NONE,8.53
+DP-2025-00418,2025-04-26,South,Corporate,Store,Outdoor,Camping Lantern,3,16.72,0.05,47.65,10.75,3.52,Kept,6,5,Pay Later,,CLEARANCE,11.88
+DP-2025-00419,2025-06-25,South,Small Business,Marketplace,Office,Desk Organizer,1,24.12,0.05,22.91,14.22,-2.82,Kept,7,3,Credit Card,,LOYAL15,11.51
+DP-2025-00420,2025-04-15,Northeast,Small Business,Online,Office,Desk Organizer,2,23.3,0.1,41.94,14.57,9.17,Kept,5,5,Digital Wallet,50,CLEARANCE,3.63
+DP-2025-00421,2025-04-15,South,Small Business,Store,Home & Kitchen,Air Purifier,2,43.91,0.15,74.65,33.01,1.24,Kept,,5,Debit Card,,LOYAL15,
+DP-2024-00422,2024-07-27,South,Small Business,,Outdoor,Insulated Bottle,3,56.29,0.05,160.43,35.35,41.42,Kept,4,,Pay Later,20,,12.96
+DP-2025-00423,2025-02-23,West,Consumer,Marketplace,Electronics,Smart Speaker,2,283.52,0.0,567.04,202.34,149.64,Kept,5,2,Digital Wallet,,,12.72
+DP-2025-00424,2025-04-13,,Corporate,Store,Outdoor,Travel Backpack,2,232.44,0.05,441.64,152.71,122.7,Kept,9,,,28,,13.52
+DP-2024-00425,2024-08-14,West,Corporate,Marketplace,Office,Desk Organizer,5,249.05,0.0,1245.25,160.82,437.51,Kept,2,,,50,LOYAL15,
+DP-2025-00426,2025-08-03,Midwest,Corporate,Store,Electronics,Laptop Stand,2,111.4,0.0,222.8,79.16,58.44,Kept,3,4,Pay Later,,NONE,6.04
+DP-2024-00427,2024-09-20,South,Small Business,Marketplace,Home & Kitchen,Air Purifier,3,51.59,0.05,147.03,38.12,19.57,Kept,,4,Debit Card,,,13.1
+DP-2024-00428,2024-05-21,West,Consumer,Marketplace,Electronics,Smart Speaker,1,145.74,0.0,145.74,101.15,37.01,,7,4,Digital Wallet,62,CLEARANCE,7.58
+DP-2025-00429,2025-10-08,Midwest,Consumer,Marketplace,Home & Kitchen,Coffee Maker,4,48.35,0.05,183.73,35.4,36.04,Kept,7,,,,,
+DP-2024-00430,2024-12-16,Midwest,Consumer,Online,Outdoor,Camping Lantern,2,121.96,0.05,231.72,81.46,65.07,Kept,7,4,Debit Card,71,NONE,3.73
+DP-2025-00431,2025-06-21,Midwest,Corporate,Marketplace,Office,Ergonomic Chair,3,38.95,0.0,116.85,23.76,39.2,Kept,3,5,Credit Card,,,6.37
+DP-2025-00432,2025-11-18,Midwest,Consumer,Online,Outdoor,Picnic Blanket,1,101.99,0.0,101.99,69.68,27.07,Kept,5,,,65,SPRING10,5.24
+DP-2024-00433,2024-05-19,South,,Store,Outdoor,Picnic Blanket,1,215.86,0.0,215.86,141.61,68.99,Kept,,4,,67,,5.26
+DP-2025-00434,2025-10-09,South,Corporate,Marketplace,Office,Desk Organizer,1,229.22,0.0,229.22,136.23,86.57,Kept,2,3,,19,WELCOME,6.42
+DP-2025-00435,2025-02-17,South,Consumer,Online,Electronics,Laptop Stand,1,19.17,0.0,19.17,13.72,-0.26,Kept,8,2,Credit Card,,LOYAL15,5.71
+DP-2025-00436,2025-11-27,Northeast,Small Business,Store,Outdoor,Travel Backpack,5,39.25,0.2,157.0,27.04,18.16,Kept,6,,Credit Card,66,,3.64
+DP-2025-00437,2025-07-08,West,Small Business,Store,Outdoor,Insulated Bottle,5,154.73,0.05,734.97,102.57,219.07,Kept,7,,Pay Later,47,,3.05
+DP-2024-00438,2024-08-11,Northeast,Consumer,Online,Outdoor,Travel Backpack,4,31.57,0.05,119.97,20.11,29.74,Kept,,4,Digital Wallet,,LOYAL15,9.79
+DP-2025-00439,2025-05-14,West,Consumer,Marketplace,Office,Notebook Set,4,77.93,0.1,280.55,48.34,76.37,Kept,4,4,Debit Card,,CLEARANCE,10.82
+DP-2024-00440,2024-05-13,Northeast,Corporate,Online,Outdoor,Camping Lantern,1,70.29,0.0,70.29,45.29,15.64,Kept,4,,Debit Card,49,NONE,
+DP-2024-00441,2024-10-05,Midwest,Corporate,Online,Home & Kitchen,Air Purifier,5,84.83,0.05,402.94,65.57,70.3,Kept,9,2,Debit Card,,SPRING10,4.79
+DP-2024-00442,2024-11-04,West,Corporate,Online,Home & Kitchen,Desk Lamp,4,51.72,0.05,196.54,35.66,40.67,Kept,5,4,Pay Later,,,
+DP-2024-00443,2024-06-12,South,Small Business,Marketplace,Outdoor,Picnic Blanket,1,23.29,0.1,20.96,,-1.9,Kept,6,5,Credit Card,,WELCOME,7.05
+DP-2025-00444,2025-12-10,Northeast,Small Business,Marketplace,Outdoor,Insulated Bottle,1,56.18,0.05,53.37,35.83,5.44,Kept,2,4,Credit Card,,LOYAL15,12.1
+DP-2025-00445,2025-03-12,Northeast,Consumer,Marketplace,Electronics,Webcam,5,24.76,0.1,111.42,16.77,13.76,Kept,1,5,Pay Later,56,SPRING10,13.81
+DP-2024-00446,2024-04-25,South,Small Business,Store,Outdoor,Picnic Blanket,2,24.38,0.0,48.76,16.21,6.94,Kept,10,,,,,9.4
+DP-2025-00447,2025-03-24,Midwest,Corporate,Marketplace,Outdoor,Picnic Blanket,1,26.52,0.2,21.22,17.81,-8.81,Kept,7,,Digital Wallet,,NONE,12.22
+DP-2025-00448,2025-04-19,South,Small Business,Marketplace,Outdoor,Camping Lantern,2,28.2,0.15,47.94,18.06,0.91,Kept,8,4,Credit Card,74,CLEARANCE,10.91
+DP-2025-00449,2025-12-12,Midwest,Corporate,Marketplace,Outdoor,Picnic Blanket,2,129.38,0.0,258.76,82.43,83.26,Kept,7,4,Digital Wallet,24,,10.64
+DP-2025-00450,2025-09-22,Midwest,Consumer,Marketplace,Office,Desk Organizer,4,43.02,0.2,137.66,27.74,18.6,Kept,4,5,,,SPRING10,8.1
+DP-2025-00451,2025-03-20,South,,Online,Office,Monitor Arm,4,275.54,0.1,991.94,162.3,339.01,Kept,5,,Debit Card,63,,3.73
+DP-2024-00452,2024-11-21,South,Corporate,Store,Office,Notebook Set,2,116.02,0.0,232.04,75.0,69.76,Kept,5,5,Pay Later,,SPRING10,
+DP-2025-00453,2025-06-22,South,Consumer,Online,Outdoor,Picnic Blanket,4,265.87,0.25,797.61,180.96,66.11,Kept,3,3,Debit Card,45,CLEARANCE,
+DP-2024-00454,2024-06-12,South,Consumer,Marketplace,Outdoor,Travel Backpack,3,28.03,0.15,71.48,17.93,6.18,Kept,8,,,,,11.51
+DP-2025-00455,2025-05-05,South,Consumer,Online,Outdoor,Insulated Bottle,5,38.42,0.3,134.47,25.52,3.28,Kept,1,4,Credit Card,70,,3.59
+DP-2024-00456,2024-04-24,West,Corporate,Store,Office,Notebook Set,1,108.25,0.2,86.6,64.3,14.48,,6,4,Debit Card,,,
+DP-2024-00457,2024-04-17,Midwest,Consumer,Store,Home & Kitchen,Cookware Set,3,274.89,,824.67,210.69,187.33,Kept,,5,Debit Card,50,LOYAL15,5.27
+DP-2025-00458,2025-02-04,South,Small Business,Store,Outdoor,Travel Backpack,1,71.05,0.0,71.05,47.91,16.12,Kept,,1,Pay Later,51,SPRING10,7.02
+DP-2025-00459,2025-09-15,Midwest,Small Business,Marketplace,Home & Kitchen,Air Purifier,1,102.89,0.05,97.75,74.47,14.25,Kept,8,5,Credit Card,44,WELCOME,9.03
+DP-2024-00460,2024-01-26,South,Corporate,Marketplace,Office,Desk Organizer,5,21.45,0.0,107.25,13.65,33.94,Kept,3,2,Debit Card,42,CLEARANCE,
+DP-2025-00461,2025-03-16,South,Small Business,Online,Electronics,Wireless Headphones,1,17.27,0.0,17.27,12.61,-5.36,,5,,Pay Later,,NONE,10.02
+DP-2025-00462,2025-05-04,Midwest,Corporate,Online,Office,Monitor Arm,3,21.64,,61.67,14.08,14.6,Kept,,5,Debit Card,45,SPRING10,4.83
+DP-2024-00463,2024-07-27,Northeast,Consumer,Store,Home & Kitchen,Cookware Set,2,126.62,0.05,240.58,88.15,60.21,Kept,9,4,Credit Card,,NONE,4.07
+DP-2024-00464,2024-11-10,South,Consumer,Marketplace,Office,Ergonomic Chair,3,205.53,0.0,616.59,123.06,234.83,Kept,,2,Debit Card,61,,
+DP-2024-00465,2024-04-08,Northeast,,Store,Home & Kitchen,Air Purifier,2,31.18,0.25,46.77,23.28,-8.57,Kept,3,2,Pay Later,,,
+DP-2024-00466,2024-09-23,West,,Marketplace,Office,Monitor Arm,1,107.84,0.2,86.27,68.64,6.79,Kept,7,3,Digital Wallet,74,,10.84
+DP-2024-00467,2024-10-18,West,Consumer,Marketplace,Electronics,Webcam,1,82.74,0.3,57.92,55.52,-5.14,Kept,3,5,,61,LOYAL15,
+DP-2024-00468,2024-11-08,West,,Store,Home & Kitchen,Desk Lamp,4,27.56,0.1,99.22,18.93,20.28,Kept,,3,Debit Card,72,WELCOME,
+DP-2025-00469,2025-08-01,Northeast,Small Business,Store,Office,Desk Organizer,2,157.09,0.0,314.18,99.63,108.69,,,3,Debit Card,26,,6.23
+DP-2024-00470,2024-11-15,,Small Business,Online,Office,Monitor Arm,4,17.55,0.0,70.2,10.35,17.53,Kept,7,,Debit Card,,NONE,11.27
+DP-2025-00471,2025-06-25,Northeast,Small Business,Marketplace,Home & Kitchen,Coffee Maker,1,287.82,0.0,287.82,203.24,78.67,Kept,,5,Pay Later,59,NONE,5.91
+DP-2025-00472,2025-08-25,West,Corporate,Marketplace,Electronics,Webcam,4,39.22,0.05,149.04,28.2,29.45,Kept,7,,Credit Card,,LOYAL15,
+DP-2025-00473,2025-03-02,Midwest,Corporate,Online,Office,Monitor Arm,1,103.94,0.0,103.94,62.11,36.28,Kept,9,3,,61,,5.55
+DP-2025-00474,2025-06-04,South,Consumer,Online,Office,Notebook Set,2,27.92,1.4,55.84,17.48,10.8,Kept,6,,Credit Card,37,SPRING10,10.08
+DP-2024-00475,2024-08-26,Midwest,Consumer,Marketplace,Home & Kitchen,Coffee Maker,2,87.38,0.0,174.76,67.44,26.86,Kept,7,,,33,SPRING10,
+DP-2025-00476,2025-08-20,West,Consumer,Marketplace,Electronics,Smart Speaker,3,70.49,0.2,169.18,47.64,17.59,Kept,8,5,Debit Card,72,NONE,8.67
+DP-2025-00477,2025-02-27,South,Small Business,Marketplace,Electronics,Smart Speaker,4,33.15,0.15,112.71,22.37,16.55,,2,4,,,,
+DP-2024-00478,2024-04-15,Northeast,Corporate,Store,Home & Kitchen,Cookware Set,1,32.35,0.0,32.35,24.12,3.63,Kept,6,5,Pay Later,30,WELCOME,
+DP-2024-00479,2024-04-10,Midwest,Consumer,Online,Electronics,Webcam,2,108.27,0.0,216.54,76.53,59.14,Kept,4,3,,,,4.34
+DP-2024-00480,2024-07-11,Midwest,Small Business,Marketplace,Home & Kitchen,Cookware Set,2,65.08,0.25,97.62,49.46,-13.94,,6,4,Debit Card,63,NONE,12.64
+DP-2025-00481,2025-11-18,Northeast,Small Business,Marketplace,Home & Kitchen,Coffee Maker,2,108.09,0.3,151.33,75.05,-3.73,Kept,,5,Pay Later,67,SPRING10,4.96
+DP-2025-00482,2025-11-10,West,Small Business,,Office,Monitor Arm,3,233.78,0.0,701.34,136.63,286.15,Kept,9,,Credit Card,,,5.3
+DP-2024-00483,2024-01-16,,Corporate,Store,Electronics,Wireless Headphones,1,51.71,0.1,46.54,37.06,-1.87,Kept,7,,,19,,11.35
+DP-2025-00484,2025-12-03,Northeast,Small Business,Store,Office,Desk Organizer,4,44.22,0.2,141.5,28.3,20.64,Kept,8,5,Credit Card,38,SPRING10,
+DP-2025-00485,2025-03-23,Northeast,Consumer,Online,Home & Kitchen,Coffee Maker,1,256.98,0.0,256.98,196.64,56.07,Kept,4,,Digital Wallet,52,WELCOME,4.27
+DP-2024-00486,2024-06-12,Northeast,Consumer,Marketplace,Office,Notebook Set,1,122.94,0.1,110.65,80.53,23.78,Kept,3,5,,47,,6.34
+DP-2025-00487,2025-08-08,South,Small Business,Marketplace,Outdoor,Insulated Bottle,1,16.84,0.25,12.63,11.51,-2.84,Kept,3,,Pay Later,,WELCOME,3.96
+DP-2024-00488,2024-06-15,Midwest,Consumer,Online,Outdoor,Camping Lantern,2,19.93,0.1,35.87,13.89,-3.04,Kept,3,,Pay Later,68,,
+DP-2024-00489,2024-02-24,West,Corporate,Marketplace,Office,Monitor Arm,1,40.69,0.0,40.69,25.89,2.64,Kept,,4,Debit Card,73,,12.16
+DP-2024-00490,2024-04-03,Northeast,Consumer,Online,Office,Monitor Arm,1,23.37,0.2,18.7,14.25,-6.54,Kept,6,4,Digital Wallet,75,CLEARANCE,10.99
+DP-2024-00491,2024-04-26,Northeast,Consumer,Store,Home & Kitchen,Cookware Set,5,164.24,0.05,780.14,114.52,204.22,,8,,Credit Card,28,WELCOME,
+DP-2025-00492,2025-06-17,West,Small Business,Store,Outdoor,Camping Lantern,1,15.75,0.1,14.18,10.01,-10.4,Returned,,5,Digital Wallet,18,WELCOME,12.02
+DP-2024-00493,2024-12-08,South,Consumer,Store,Electronics,Laptop Stand,2,189.33,0.25,284.0,123.75,23.75,Kept,1,4,,29,,12.75
+DP-2025-00494,2025-05-22,Northeast,Small Business,Online,Outdoor,Camping Lantern,5,56.91,0.0,284.55,38.02,,Kept,2,4,Debit Card,34,WELCOME,11.1
+DP-2024-00495,2024-01-27,Northeast,Small Business,Online,Electronics,Wireless Headphones,3,89.13,0.2,213.91,64.97,13.79,Kept,4,5,Debit Card,,SPRING10,5.21
+DP-2025-00496,2025-10-21,West,Consumer,Marketplace,Office,Ergonomic Chair,2,30.98,0.2,49.57,20.06,4.5,Kept,2,,Pay Later,,,
+DP-2025-00497,2025-05-05,Midwest,,Store,Outdoor,Picnic Blanket,4,27.49,0.0,109.96,18.58,31.76,Kept,3,,Debit Card,,,3.88
+DP-2025-00498,2025-05-07,Midwest,Small Business,Store,Outdoor,Travel Backpack,2,27.61,0.0,55.22,18.61,3.67,Returned,9,5,Pay Later,49,SPRING10,4.39
+DP-2025-00499,2025-03-01,Northeast,Small Business,Marketplace,Office,Desk Organizer,1,27.28,0.0,27.28,17.2,-1.98,Kept,10,,,,,
+DP-2025-00500,2025-02-10,South,Corporate,Online,Electronics,Wireless Headphones,3,45.27,0.0,135.81,31.94,31.57,Kept,10,,Credit Card,54,CLEARANCE,8.42
+DP-2025-00501,2025-11-03,West,Consumer,Online,Office,Ergonomic Chair,1,20.95,0.1,18.86,13.56,-2.08,Returned,,4,,57,,3.99
+DP-2024-00502,2024-10-22,South,Small Business,Online,Office,Notebook Set,1,21.38,0.1,19.24,13.52,-5.71,Kept,,,,26,WELCOME,
+DP-2025-00503,2025-10-21,South,,Store,Home & Kitchen,Cookware Set,3,260.9,,665.29,198.88,56.07,Kept,,,,,SPRING10,12.58
+DP-2025-00504,2025-09-12,West,Consumer,Store,Outdoor,Insulated Bottle,4,50.9,0.0,203.6,34.33,62.7,Kept,,3,Credit Card,37,,3.58
+DP-2025-00505,2025-04-14,South,Corporate,Store,Home & Kitchen,Cookware Set,2,20.02,0.15,34.03,15.35,-4.13,Kept,9,,Digital Wallet,62,CLEARANCE,7.46
+DP-2024-00506,2024-12-04,Northeast,Small Business,Marketplace,Office,Ergonomic Chair,1,28.39,0.0,28.39,18.65,-1.88,Kept,7,4,Digital Wallet,,SPRING10,
+DP-2025-00507,2025-10-21,West,Consumer,Marketplace,Electronics,Wireless Headphones,3,37.04,0.15,94.45,24.3,17.45,Kept,3,,Debit Card,,LOYAL15,
+DP-2025-00508,2025-12-07,South,Small Business,Online,Office,Desk Organizer,2,158.34,0.0,316.68,99.87,105.57,Kept,4,,Debit Card,44,CLEARANCE,11.37
+DP-2025-00509,2025-03-26,Midwest,Small Business,Online,Office,Monitor Arm,2,42.67,0.0,85.34,27.94,21.5,Kept,5,5,Pay Later,31,WELCOME,7.96
+DP-2024-00510,2024-10-08,Northeast,Small Business,Store,Electronics,Laptop Stand,2,51.77,0.1,93.19,33.69,18.13,Kept,3,,,,CLEARANCE,7.68
+DP-2025-00511,2025-11-15,Midwest,Consumer,Store,Outdoor,Picnic Blanket,3,163.99,0.0,491.97,113.91,145.6,Kept,6,,Debit Card,47,NONE,4.64
+DP-2024-00512,2024-10-22,South,Consumer,Marketplace,Home & Kitchen,Air Purifier,1,70.37,0.05,66.85,54.29,8.69,Kept,10,4,Debit Card,74,,
+DP-2025-00513,2025-04-04,Northeast,Small Business,Marketplace,Outdoor,Picnic Blanket,3,121.85,0.05,347.27,76.38,105.56,,8,2,Credit Card,45,,12.57
+DP-2024-00514,2024-03-23,Midwest,Corporate,Store,Electronics,Webcam,1,50.02,0.1,45.02,32.69,-0.79,Kept,,,Pay Later,,SPRING10,13.12
+DP-2024-00515,2024-05-20,West,Consumer,Store,Home & Kitchen,Air Purifier,1,131.85,0.15,112.07,98.19,,Kept,10,,Digital Wallet,58,SPRING10,3.11
+DP-2024-00516,2024-02-19,West,Corporate,Online,Electronics,Smart Speaker,2,73.49,0.05,139.63,49.52,29.06,Kept,5,,Pay Later,,,
+DP-2025-00517,2025-07-14,West,Small Business,Online,Office,Notebook Set,1,129.52,0.3,90.66,81.42,4.77,Kept,1,,Pay Later,63,LOYAL15,
+DP-2025-00518,2025-01-22,South,Consumer,Store,Home & Kitchen,Desk Lamp,1,104.55,0.15,88.87,77.76,3.79,Kept,,4,Credit Card,,SPRING10,7.32
+DP-2025-00519,2025-09-07,West,Consumer,Online,Home & Kitchen,Coffee Maker,1,67.91,0.1,61.12,48.59,-0.35,Kept,4,4,Pay Later,,,12.88
+DP-2024-00520,2024-10-20,South,Corporate,Store,Outdoor,Travel Backpack,1,34.61,0.05,32.88,21.92,-2.84,Kept,,,Credit Card,,NONE,13.8
+DP-2024-00521,2024-04-18,West,Corporate,Store,Outdoor,Camping Lantern,2,31.27,0.15,53.16,19.69,2.15,Kept,9,4,,,,11.63
+DP-2024-00522,2024-01-17,South,Corporate,Store,Home & Kitchen,Desk Lamp,1,131.76,0.1,118.58,101.13,5.26,Kept,,5,,31,CLEARANCE,12.19
+DP-2025-00523,2025-12-22,Midwest,Consumer,Marketplace,Outdoor,Travel Backpack,1,241.41,0.0,241.41,168.59,22.39,Returned,10,4,Pay Later,45,CLEARANCE,6.98
+DP-2025-00524,2025-10-09,West,Small Business,Marketplace,Office,Ergonomic Chair,2,86.55,0.15,147.13,53.32,30.24,Kept,10,5,Debit Card,,,10.25
+DP-2025-00525,2025-04-08,Northeast,Corporate,Store,Outdoor,Travel Backpack,1,130.1,0.05,123.59,83.29,28.05,Kept,5,4,,59,SPRING10,12.25
+DP-2025-00526,2025-02-22,South,,Marketplace,Outdoor,Picnic Blanket,3,21.17,0.0,63.51,14.4,8.21,Kept,5,4,Pay Later,,CLEARANCE,12.1
+DP-2024-00527,2024-11-01,South,Small Business,Online,Home & Kitchen,Cookware Set,2,179.64,0.0,359.28,137.7,,Kept,8,,Digital Wallet,47,,13.38
+DP-2025-00528,2025-01-02,Northeast,Corporate,Store,Home & Kitchen,Coffee Maker,2,67.95,0.25,101.93,51.35,-5.08,Kept,,3,,64,NONE,4.31
+DP-2024-00529,2024-05-01,Midwest,Corporate,Marketplace,Office,Desk Organizer,2,102.26,0.0,204.52,65.22,61.91,Kept,9,,Debit Card,59,,
+DP-2024-00530,2024-02-10,South,Corporate,Online,Office,Notebook Set,4,21.6,0.15,73.44,14.15,11.46,Kept,3,5,Pay Later,,LOYAL15,5.38
+DP-2025-00531,2025-09-22,Northeast,Consumer,Online,Home & Kitchen,Coffee Maker,4,129.31,0.0,517.24,88.93,151.3,Kept,6,,,,,10.22
+DP-2024-00532,2024-09-27,Midwest,Consumer,Store,Outdoor,Picnic Blanket,1,43.09,0.15,36.63,27.11,4.16,Kept,5,,Pay Later,39,WELCOME,5.36
+DP-2025-00533,2025-01-24,Northeast,,Marketplace,Home & Kitchen,Air Purifier,2,264.5,0.0,529.0,193.29,131.78,Kept,2,,Credit Card,,NONE,10.64
+DP-2024-00534,2024-01-17,Northeast,Consumer,Store,Office,Notebook Set,3,103.57,0.0,310.71,62.65,113.99,Kept,4,5,Credit Card,39,WELCOME,8.77
+DP-2024-00535,2024-04-11,Northeast,Small Business,Store,Electronics,Laptop Stand,2,21.75,0.05,41.32,15.49,5.75,Kept,4,,,72,CLEARANCE,4.59
+DP-2024-00536,2024-06-15,West,Consumer,Online,Home & Kitchen,Desk Lamp,2,166.16,0.0,332.32,122.99,78.6,Kept,3,2,,55,,7.74
+DP-2025-00537,2025-08-02,Northeast,Consumer,Store,Home & Kitchen,Cookware Set,2,42.67,0.15,72.54,31.1,3.78,Kept,6,1,Digital Wallet,53,,
+DP-2024-00538,2024-10-06,Midwest,Consumer,Store,Home & Kitchen,Coffee Maker,1,40.2,,34.17,29.58,-7.78,Kept,,2,Digital Wallet,26,LOYAL15,12.37
+DP-2025-00539,2025-10-07,South,Small Business,Store,Electronics,Webcam,2,26.94,0.2,43.1,19.08,-9.71,Returned,,1,Debit Card,36,CLEARANCE,6.89
+DP-2024-00540,2024-07-15,Northeast,Consumer,Online,Home & Kitchen,Air Purifier,4,150.76,0.0,603.04,114.4,139.81,Kept,3,3,Credit Card,63,,5.63
+DP-2024-00541,2024-09-12,Northeast,Consumer,Store,Outdoor,Insulated Bottle,1,65.07,0.0,65.07,42.93,17.09,Kept,7,3,Credit Card,,,
+DP-2024-00542,2024-10-15,Midwest,Small Business,Marketplace,Electronics,Wireless Headphones,1,50.98,0.2,40.78,35.28,-3.83,Kept,,4,Debit Card,48,LOYAL15,
+DP-2025-00543,2025-04-07,West,Consumer,Store,Home & Kitchen,Coffee Maker,1,42.8,0.0,42.8,31.84,7.59,Kept,1,4,Pay Later,,,3.37
+DP-2024-00544,2024-07-16,Midwest,Small Business,Online,Office,Monitor Arm,3,178.87,0.05,509.78,,166.49,Kept,3,5,,49,WELCOME,
+DP-2025-00545,2025-02-25,Northeast,Small Business,Store,Home & Kitchen,Desk Lamp,5,229.01,0.1,1030.55,160.66,215.53,Kept,8,5,Pay Later,37,LOYAL15,
+DP-2025-00546,2025-10-16,West,Small Business,Online,Home & Kitchen,Air Purifier,5,44.0,0.0,220.0,31.91,55.75,Kept,3,,Digital Wallet,31,,4.7
+DP-2024-00547,2024-10-20,South,Corporate,Store,Office,Notebook Set,1,42.93,0.2,34.34,26.01,-1.48,Kept,8,3,Credit Card,,,9.81
+DP-2025-00548,2025-09-19,West,Small Business,Store,Electronics,Webcam,5,87.15,0.0,435.75,62.34,119.41,Kept,3,5,,68,,4.64
+DP-2024-00549,2024-02-22,Midwest,Consumer,Marketplace,Electronics,Wireless Headphones,1,83.86,0.2,67.09,57.9,-12.8,Returned,5,4,Pay Later,18,SPRING10,9.91
+DP-2025-00550,2025-03-16,West,Corporate,Store,Electronics,Smart Speaker,1,227.93,0.1,205.14,163.38,32.78,Kept,2,5,Debit Card,42,WELCOME,8.98
+DP-2024-00551,2024-12-04,West,Small Business,Store,Outdoor,Travel Backpack,3,30.68,0.0,92.04,20.41,21.64,Kept,,3,Pay Later,33,SPRING10,9.17
+DP-2024-00552,2024-12-20,West,Corporate,Store,Electronics,Smart Speaker,1,124.9,0.0,124.9,82.97,38.04,Kept,10,3,Pay Later,,,
+DP-2025-00553,2025-05-07,South,Small Business,Store,Home & Kitchen,Air Purifier,1,88.23,0.3,61.76,61.79,-12.79,Kept,1,4,Digital Wallet,,,
+DP-2025-00554,2025-06-20,Northeast,Small Business,Store,Electronics,Smart Speaker,4,37.78,0.05,143.56,24.92,36.65,Kept,2,3,Digital Wallet,65,SPRING10,7.23
+DP-2024-00555,2024-08-04,South,Small Business,Store,Outdoor,Camping Lantern,1,251.16,0.0,251.16,171.02,67.77,Kept,5,2,Debit Card,,,12.37
+DP-2025-00556,2025-07-16,Midwest,Consumer,Online,Home & Kitchen,Cookware Set,4,108.47,0.05,412.19,75.45,103.39,Kept,2,,Debit Card,,SPRING10,7.0
+DP-2025-00557,2025-07-18,Northeast,Consumer,Store,Office,Monitor Arm,3,32.18,0.15,82.06,19.03,15.27,Kept,4,,,67,,9.7
+DP-2024-00558,2024-02-26,South,Small Business,Store,Office,Notebook Set,1,49.24,0.25,36.93,32.18,0.36,,1,,Debit Card,40,LOYAL15,4.39
+DP-2024-00559,2024-12-23,,Corporate,Marketplace,Electronics,Wireless Headphones,2,98.02,0.0,196.04,70.08,50.57,Kept,9,3,,27,WELCOME,5.31
+DP-2024-00560,2024-08-18,West,Small Business,Online,Outdoor,Insulated Bottle,3,29.91,0.0,89.73,19.71,4.71,Returned,7,,Pay Later,25,,
+DP-2025-00561,2025-09-20,Midwest,Consumer,Online,Electronics,Smart Speaker,2,168.92,0.0,337.84,114.73,103.5,Kept,,,Credit Card,73,SPRING10,4.88
+DP-2025-00562,2025-05-19,Northeast,Small Business,Marketplace,Home & Kitchen,Desk Lamp,5,21.63,0.1,97.33,15.29,14.32,Kept,,,Debit Card,47,,6.56
+DP-2025-00563,2025-10-23,Midwest,Corporate,Store,Office,Monitor Arm,5,138.61,0.15,589.09,83.95,162.31,Kept,9,5,Credit Card,73,NONE,7.03
+DP-2025-00564,2025-10-25,West,Corporate,Store,Home & Kitchen,Coffee Maker,2,254.03,0.2,406.45,180.07,38.74,Kept,7,2,,,SPRING10,7.57
+DP-2024-00565,2024-10-07,West,Corporate,Online,Electronics,Smart Speaker,5,84.96,0.1,382.32,59.13,77.68,Kept,3,4,Debit Card,,SPRING10,
+DP-2024-00566,2024-11-27,South,Consumer,Online,Outdoor,Camping Lantern,2,126.14,0.2,201.82,79.12,39.33,Kept,,,Debit Card,35,,
+DP-2024-00567,2024-11-27,Northeast,Consumer,Store,Home & Kitchen,Air Purifier,1,41.91,0.0,41.91,31.86,0.2,Kept,9,4,,66,CLEARANCE,9.85
+DP-2025-00568,2025-05-26,South,Small Business,Marketplace,Office,Desk Organizer,2,29.87,0.1,53.77,18.14,12.41,Kept,,4,Credit Card,40,LOYAL15,5.08
+DP-2025-00569,2025-05-04,West,Consumer,,Outdoor,Picnic Blanket,1,27.35,0.05,25.98,18.46,-0.83,Returned,9,,Digital Wallet,70,,
+DP-2025-00570,2025-07-09,Northeast,Consumer,Store,Office,Ergonomic Chair,2,30.01,0.0,60.02,17.87,19.19,Kept,10,4,Credit Card,38,CLEARANCE,5.09
+DP-2025-00571,2025-04-03,Midwest,Small Business,Store,Electronics,Webcam,5,260.02,0.2,1040.08,174.56,160.9,Kept,10,4,Pay Later,50,,6.38
+DP-2024-00572,2024-05-27,Midwest,Corporate,Marketplace,Home & Kitchen,Coffee Maker,5,55.15,0.1,248.18,41.11,37.56,Kept,2,5,Digital Wallet,56,NONE,5.07
+DP-2025-00573,2025-02-24,Midwest,Consumer,Marketplace,Outdoor,Insulated Bottle,2,44.82,0.0,89.64,30.53,15.2,Kept,8,4,Credit Card,20,CLEARANCE,13.38
+DP-2024-00574,2024-08-10,West,Small Business,Marketplace,Electronics,Wireless Headphones,3,163.99,0.0,491.97,116.14,129.63,Kept,2,,Pay Later,62,,13.92
+DP-2024-00575,2024-06-09,Northeast,Corporate,Store,Electronics,Wireless Headphones,1,15.3,0.15,13.01,10.94,-4.7,Kept,,4,Pay Later,,LOYAL15,6.77
+DP-2024-00576,2024-04-22,South,Consumer,Store,Office,Notebook Set,2,241.41,0.0,482.82,150.47,170.09,Kept,,4,Credit Card,75,,11.79
+DP-2025-00577,2025-03-21,Northeast,Small Business,Store,Electronics,Wireless Headphones,1,57.41,0.0,57.41,38.77,9.1,Kept,7,,,,,9.54
+DP-2025-00578,2025-07-21,Northeast,Corporate,Online,Home & Kitchen,Air Purifier,1,175.32,0.0,175.32,132.61,37.5,Kept,2,,Pay Later,67,,5.21
+DP-2025-00579,2025-02-13,South,Corporate,,Outdoor,Insulated Bottle,3,72.95,0.2,175.08,46.6,29.19,Kept,6,5,Digital Wallet,50,,6.09
+DP-2025-00580,2025-03-25,West,Corporate,,Home & Kitchen,Air Purifier,2,29.28,0.15,49.78,21.43,-6.32,Kept,9,5,Pay Later,52,CLEARANCE,13.24
+DP-2024-00581,2024-10-25,Midwest,Consumer,Online,Electronics,Wireless Headphones,1,23.33,0.15,19.83,16.34,-5.83,Kept,5,,Digital Wallet,24,,9.32
+DP-2025-00582,2025-04-04,Northeast,Small Business,Marketplace,Office,Desk Organizer,3,95.98,0.25,215.95,62.0,25.36,Kept,7,5,Credit Card,,,4.59
+DP-2024-00583,2024-11-22,Northeast,Corporate,,Electronics,Smart Speaker,1,120.41,0.0,120.41,79.16,28.73,Kept,10,,Pay Later,,,12.52
+DP-2025-00584,2025-12-13,Midwest,Consumer,Online,Home & Kitchen,Air Purifier,1,257.08,0.0,257.08,179.54,67.5,Kept,,1,Credit Card,,CLEARANCE,10.04
+DP-2025-00585,2025-03-19,Midwest,Consumer,Store,Home & Kitchen,Desk Lamp,3,32.69,0.0,98.07,22.78,20.6,Kept,9,,,,,9.13
+DP-2024-00586,2024-05-17,Northeast,Consumer,Store,Outdoor,Picnic Blanket,1,78.46,0.15,66.69,52.48,8.31,Kept,,,Pay Later,,,5.9
+DP-2025-00587,2025-09-15,Midwest,Small Business,Marketplace,Office,Monitor Arm,5,20.68,0.25,77.55,12.14,10.43,Kept,1,,,,,6.42
+DP-2025-00588,2025-03-07,Midwest,Small Business,Store,Outdoor,Picnic Blanket,3,143.01,0.0,429.03,98.62,126.4,Kept,,,Credit Card,71,NONE,6.77
+DP-2024-00589,2024-10-15,West,,Online,Office,Notebook Set,5,65.74,0.0,328.7,43.01,100.02,Kept,6,4,Pay Later,72,NONE,13.63
+DP-2024-00590,2024-07-06,Midwest,Consumer,Marketplace,Office,Desk Organizer,4,21.15,0.0,84.6,13.0,20.04,Kept,4,1,,73,,
+DP-2025-00591,2025-10-09,Northeast,Small Business,Online,Electronics,Laptop Stand,4,39.67,0.0,158.68,25.82,51.24,Kept,3,5,Pay Later,24,,
+DP-2024-00592,2024-03-11,Midwest,Small Business,Online,Outdoor,Picnic Blanket,2,78.87,0.15,134.08,53.65,18.83,Kept,2,,Digital Wallet,,CLEARANCE,7.95
+DP-2025-00593,2025-01-09,West,Corporate,Online,Home & Kitchen,Cookware Set,2,51.64,0.05,98.12,38.37,9.59,,3,,Debit Card,63,SPRING10,11.79
+DP-2024-00594,2024-07-17,South,Corporate,Store,Office,Desk Organizer,3,31.54,0.0,94.62,19.44,32.06,Kept,7,,Debit Card,53,,4.24
+DP-2025-00595,2025-07-11,Midwest,Corporate,Online,Electronics,Wireless Headphones,1,99.06,0.05,94.11,70.15,20.83,Kept,,3,Credit Card,23,,3.13
+DP-2024-00596,2024-02-04,Northeast,Small Business,Online,Electronics,Webcam,1,54.33,0.2,43.46,35.83,-10.47,Returned,4,,Debit Card,,LOYAL15,10.28
+DP-2025-00597,2025-09-25,West,,Online,Office,Notebook Set,3,189.05,0.05,538.79,117.17,178.36,Kept,8,,Pay Later,53,SPRING10,
+DP-2025-00598,2025-08-03,South,Consumer,Online,Electronics,Wireless Headphones,1,109.62,0.15,93.18,76.99,3.34,Kept,5,4,Digital Wallet,57,,
+DP-2025-00599,2025-05-17,South,Small Business,Store,Office,Desk Organizer,4,53.08,0.15,180.47,31.04,12.22,Returned,,,Credit Card,48,CLEARANCE,11.61
+DP-2025-00600,2025-01-26,Midwest,Corporate,Store,Office,Monitor Arm,1,18.49,0.05,17.57,11.76,-0.38,Kept,9,4,,,LOYAL15,6.19
+DP-2024-00023,2024-10-12,West,Corporate,Store,Office,Monitor Arm,1,42.29,0.2,33.83,24.88,-6.68,Returned,7,5,Digital Wallet,,NONE,9.54
+DP-2024-00092,2024-07-18,West,Small Business,Store,Home & Kitchen,Air Purifier,2,49.55,0.05,94.14,34.49,13.5,Kept,8,,Debit Card,53,,11.66
+DP-2025-00177,2025-10-04,South,Small Business,Store,Office,Desk Organizer,1,124.76,0.1,112.28,79.38,28.33,Kept,10,2,Digital Wallet,,SPRING10,4.57
+DP-2025-00309,2025-02-20,Northeast,Consumer,Marketplace,Outdoor,Camping Lantern,1,102.4,0.05,97.28,64.88,29.34,Kept,7,,Digital Wallet,,CLEARANCE,3.06
+DP-2024-00422,2024-07-27,South,Small Business,,Outdoor,Insulated Bottle,3,56.29,0.05,160.43,35.35,41.42,Kept,4,,Pay Later,20,,12.96
+DP-2024-00558,2024-02-26,South,Small Business,Store,Office,Notebook Set,1,49.24,0.25,36.93,32.18,0.36,,1,,Debit Card,40,LOYAL15,4.39
