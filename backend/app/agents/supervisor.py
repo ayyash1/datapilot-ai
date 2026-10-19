@@ -44,7 +44,14 @@ def supervisor_agent(state: AgentState) -> AgentState:
         state["agent_used"] = next_agent
         return state
     except Exception as e:
-        state["errors"].append(f"Supervisor error: {str(e)}")
+        error_msg = str(e)
+        state["errors"].append(f"Supervisor error: {error_msg}")
         state["agent_used"] = "FINISH"
-        state["final_response"] = "I couldn't determine how to analyze this dataset. Please try rephrasing your question."
+        if "No LLM" in error_msg or "API key" in error_msg or "providers failed" in error_msg or "credentials rejected" in error_msg:
+            state["final_response"] = (
+                f"AI Provider Error: {error_msg}. "
+                "Please verify that GEMINI_API_KEY or GROQ_API_KEY is configured in your deployment environment variables."
+            )
+        else:
+            state["final_response"] = f"Unable to analyze dataset: {error_msg}. Please try rephrasing your question."
         return state
