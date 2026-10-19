@@ -17,9 +17,10 @@ function App() {
   useEffect(() => {
     if (datasetId) {
       setLoadingProfile(true);
+      const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || '';
       const interval = setInterval(async () => {
         try {
-          const res = await axios.get('/api/datasets/' + datasetId + '/profile');
+          const res = await axios.get(`${apiBase}/api/datasets/${datasetId}/profile`);
           setProfile(res.data);
           setLoadingProfile(false);
           clearInterval(interval);
@@ -29,7 +30,7 @@ function App() {
       }, 2000);
       
       // Try to fetch dataset list to get the name
-      axios.get('/api/datasets/').then((res) => {
+      axios.get(`${apiBase}/api/datasets/`).then((res) => {
         const ds = res.data.find((d: any) => d.id === datasetId);
         if (ds) setDatasetName(ds.filename);
       }).catch(console.error);

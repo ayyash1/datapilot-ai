@@ -35,7 +35,8 @@ export function DataExplorer({ datasetId }: DataExplorerProps) {
       setLoading(true);
       setError(null);
       try {
-        const res = await axios.get(`/api/datasets/${datasetId}/data`, {
+        const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || '';
+        const res = await axios.get(`${apiBase}/api/datasets/${datasetId}/data`, {
           params: { page, limit }
         });
         if (isMounted) {
