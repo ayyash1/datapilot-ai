@@ -3,8 +3,12 @@ import axios from 'axios';
 import { UploadDropzone } from './components/UploadDropzone';
 import { Hero } from './components/Hero';
 import { DashboardLayout } from './components/dashboard/DashboardLayout';
+import { useTheme } from './components/theme-provider';
+import { Button } from './components/ui/button';
+import { Moon, Sun } from 'lucide-react';
 
 function App() {
+  const { theme, setTheme } = useTheme();
   const [datasetId, setDatasetId] = useState<number | null>(null);
   const [datasetName, setDatasetName] = useState<string | null>(null);
   const [profile, setProfile] = useState<any>(null);
@@ -60,10 +64,21 @@ function App() {
   return (
     <div className="min-h-screen bg-background font-sans antialiased text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center pl-8">
+        <div className="container flex h-14 items-center justify-between px-4 sm:px-8">
           <div className="flex items-center gap-2 font-bold text-lg">
             <span className="text-primary">DataPilot</span> AI
           </div>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            className="relative h-9 w-9 rounded-xl"
+            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+          >
+            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          </Button>
         </div>
       </header>
 
@@ -110,4 +125,3 @@ function App() {
 }
 
 export default App;
-

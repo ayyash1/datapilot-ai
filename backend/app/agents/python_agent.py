@@ -39,11 +39,9 @@ def python_analyst_agent(state: AgentState) -> AgentState:
         state["generated_code"] = python_code
         
         # Load dataset
+        from app.utils.file_loader import load_dataset_dataframe
         file_path = state["file_path"]
-        if file_path.endswith('.csv'):
-            df = pd.read_csv(file_path)
-        else:
-            df = pd.read_excel(file_path)
+        df = load_dataset_dataframe(file_path)
             
         # Secure execution environment
         local_env = {"pd": pd, "np": np}

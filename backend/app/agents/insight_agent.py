@@ -12,8 +12,9 @@ class InsightGeneration(BaseModel):
 def insight_agent(state: AgentState) -> AgentState:
     if not state.get("analysis_results"):
         try:
+            from app.utils.file_loader import load_dataset_dataframe
             file_path = state["file_path"]
-            df = pd.read_csv(file_path) if file_path.lower().endswith(".csv") else pd.read_excel(file_path)
+            df = load_dataset_dataframe(file_path)
             numeric_columns = df.select_dtypes(include="number").columns.tolist()
             categorical_columns = df.select_dtypes(exclude="number").columns.tolist()
             fallback_results = {

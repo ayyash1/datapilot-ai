@@ -876,12 +876,8 @@ class DataProfiler:
     def profile_dataset(file_path: str) -> Dict[str, Any]:
         """Profiles a dataset with rich Power BI summary stats and visual models."""
         try:
-            if file_path.endswith('.csv'):
-                df = pd.read_csv(file_path)
-            elif file_path.endswith('.xlsx'):
-                df = pd.read_excel(file_path)
-            else:
-                raise ValueError("Unsupported file format")
+            from app.utils.file_loader import load_dataset_dataframe
+            df = load_dataset_dataframe(file_path)
 
             row_count = len(df)
             col_count = len(df.columns)

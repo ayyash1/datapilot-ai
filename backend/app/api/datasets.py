@@ -5,7 +5,7 @@ import shutil
 import pandas as pd
 from fastapi import APIRouter, UploadFile, File, Depends, HTTPException, BackgroundTasks, Query
 from sqlalchemy.orm import Session
-from app.database.config import get_db
+from app.database.config import get_db, SessionLocal
 from app.models.dataset import Dataset, DatasetProfile
 from app.schemas.dataset import DatasetResponse, DatasetProfileResponse
 from app.services.profiler import DataProfiler
@@ -18,29 +18,32 @@ else:
     UPLOAD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../data/uploads"))
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-def process_dataset_profile(dataset_id: int, file_path: str, db: Session):
-    try:
-        profile_result = DataProfiler.profile_dataset(file_path)
-        
-        profile = DatasetProfile(
-            dataset_id=dataset_id,
-            row_count=profile_result["row_count"],
-            col_count=profile_result["col_count"],
-            data_quality_score=profile_result["data_quality_score"],
-            profile_data=profile_result["profile_data"]
-        )
-        db.add(profile)
-        db.commit()
-    except Exception as e:
-        print(f"Error profiling dataset {dataset_id}: {e}")
+def process_dataset_profile(dataset_id: int, file_path: str):
+    with SessionLocal() as db:
+        try:
+            profile_result = DataProfiler.profile_dataset(file_path)
+            
+            profile = DatasetProfile(
+                dataset_id=dataset_id,
+                row_count=profile_result["row_count"],
+                col_count=profile_result["col_count"],
+                data_quality_score=profile_result["data_quality_score"],
+                profile_data=profile_result["profile_data"]
+            )
+            db.add(profile)
+            db.commit()
+        except Exception as e:
+            print(f"Error profiling dataset {dataset_id}: {e}")
 
 @router.post("/upload", response_model=DatasetResponse)
-async def upload_dataset(background_tasks: BackgroundTasks, file: UploadFile = File(...), db: Session = Depends(get_db)):
-    if not file.filename.endswith(('.csv', '.xlsx')):
+async def upload_dataset(file: UploadFile = File(...), db: Session = Depends(get_db)):
+    original_filename = file.filename or "dataset.csv"
+    lower_filename = original_filename.lower()
+    if not (lower_filename.endswith('.csv') or lower_filename.endswith('.xlsx') or lower_filename.endswith('.xls')):
         raise HTTPException(status_code=400, detail="Only CSV or Excel files are allowed.")
     
     file_id = str(uuid.uuid4())
-    ext = os.path.splitext(file.filename)[1]
+    ext = os.path.splitext(original_filename)[1].lower()
     safe_filename = f"{file_id}{ext}"
     file_path = os.path.join(UPLOAD_DIR, safe_filename)
 
@@ -54,7 +57,7 @@ async def upload_dataset(background_tasks: BackgroundTasks, file: UploadFile = F
         raise HTTPException(status_code=400, detail="File too large. Maximum size is 25MB.")
 
     db_dataset = Dataset(
-        filename=file.filename,
+        filename=original_filename,
         file_path=file_path,
         size_bytes=file_size,
         mime_type=file.content_type or "text/csv"
@@ -63,8 +66,21 @@ async def upload_dataset(background_tasks: BackgroundTasks, file: UploadFile = F
     db.commit()
     db.refresh(db_dataset)
     
-    # Run profiling in background
-    background_tasks.add_task(process_dataset_profile, db_dataset.id, file_path, db)
+    # Profile dataset immediately so results are saved before response returns
+    # (Serverless runtimes freeze background tasks after HTTP response)
+    try:
+        profile_result = DataProfiler.profile_dataset(file_path)
+        profile = DatasetProfile(
+            dataset_id=db_dataset.id,
+            row_count=profile_result["row_count"],
+            col_count=profile_result["col_count"],
+            data_quality_score=profile_result["data_quality_score"],
+            profile_data=profile_result["profile_data"]
+        )
+        db.add(profile)
+        db.commit()
+    except Exception as e:
+        print(f"Warning: Immediate profiling failed for dataset {db_dataset.id}: {e}")
     
     return db_dataset
 
@@ -75,7 +91,25 @@ def list_datasets(db: Session = Depends(get_db)):
 @router.get("/{dataset_id}/profile", response_model=DatasetProfileResponse)
 def get_dataset_profile(dataset_id: int, db: Session = Depends(get_db)):
     profile = db.query(DatasetProfile).filter(DatasetProfile.dataset_id == dataset_id).first()
+    
+    # Lazy fallback: If profile was not generated during upload, profile it now on demand
     if not profile:
+        dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+        if dataset and os.path.exists(dataset.file_path):
+            try:
+                refreshed = DataProfiler.profile_dataset(dataset.file_path)
+                profile = DatasetProfile(
+                    dataset_id=dataset.id,
+                    row_count=refreshed["row_count"],
+                    col_count=refreshed["col_count"],
+                    data_quality_score=refreshed["data_quality_score"],
+                    profile_data=refreshed["profile_data"]
+                )
+                db.add(profile)
+                db.commit()
+                return profile
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=f"Error profiling dataset: {str(e)}")
         raise HTTPException(status_code=404, detail="Profile not found or still processing")
 
     profile_data = profile.profile_data or {}
@@ -84,14 +118,13 @@ def get_dataset_profile(dataset_id: int, db: Session = Depends(get_db)):
         if dataset and os.path.exists(dataset.file_path):
             try:
                 refreshed = DataProfiler.profile_dataset(dataset.file_path)
+                profile.row_count = refreshed["row_count"]
+                profile.col_count = refreshed["col_count"]
+                profile.data_quality_score = refreshed["data_quality_score"]
+                profile.profile_data = refreshed["profile_data"]
+                db.commit()
             except Exception as e:
                 raise HTTPException(status_code=500, detail=f"Error refreshing dataset profile: {str(e)}")
-
-            profile.row_count = refreshed["row_count"]
-            profile.col_count = refreshed["col_count"]
-            profile.data_quality_score = refreshed["data_quality_score"]
-            profile.profile_data = refreshed["profile_data"]
-            db.commit()
 
     return profile
 
@@ -110,13 +143,11 @@ def get_dataset_data(
         raise HTTPException(status_code=404, detail="Dataset file not found on disk")
         
     try:
-        if dataset.file_path.endswith('.csv'):
-            df = pd.read_csv(dataset.file_path)
-        else:
-            df = pd.read_excel(dataset.file_path)
+        from app.utils.file_loader import load_dataset_dataframe
+        df = load_dataset_dataframe(dataset.file_path)
             
-        # Clean up NaN values which JSON cannot serialize
-        df = df.fillna("")
+        # Clean up NaN / Inf values which JSON cannot serialize
+        df = df.replace([float('inf'), float('-inf')], None).fillna("")
         
         total_rows = len(df)
         start_idx = (page - 1) * limit
@@ -129,7 +160,7 @@ def get_dataset_data(
             "total_rows": total_rows,
             "page": page,
             "limit": limit,
-            "total_pages": (total_rows + limit - 1) // limit
+            "total_pages": (total_rows + limit - 1) // limit if limit > 0 else 1
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error reading dataset: {str(e)}")

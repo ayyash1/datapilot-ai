@@ -43,11 +43,21 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
   };
 
   const processFile = (file: File) => {
-    if (!file.name.endsWith('.csv') && !file.name.endsWith('.xlsx')) {
+    const lowerName = file.name.toLowerCase();
+    if (!lowerName.endsWith('.csv') && !lowerName.endsWith('.xlsx') && !lowerName.endsWith('.xls')) {
       setStatus('error');
       setErrorMsg('Only CSV or Excel files are allowed.');
       return;
     }
+
+    // Vercel serverless request body is capped at 4.5 MB
+    const maxSizeBytes = 4.5 * 1024 * 1024;
+    if (file.size > maxSizeBytes) {
+      setStatus('error');
+      setErrorMsg(`File size (${(file.size / (1024 * 1024)).toFixed(2)} MB) exceeds the 4.5 MB serverless upload limit. Please use a dataset under 4.5 MB.`);
+      return;
+    }
+
     setFile(file);
     setStatus('idle');
     setErrorMsg('');
@@ -63,8 +73,10 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
     formData.append('file', file);
 
     try {
+      const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || '';
+      const uploadUrl = `${apiBase}/api/datasets/upload`;
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', '/api/datasets/upload', true);
+      xhr.open('POST', uploadUrl, true);
       
       xhr.upload.onprogress = (e) => {
         if (e.lengthComputable) {
@@ -86,19 +98,26 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
           onUploadSuccess(response.id);
         } else {
           setStatus('error');
-          const responseText = xhr.responseText.trim().slice(0, 300);
-          setErrorMsg(
-            response?.detail ||
-              (xhr.status >= 200 && xhr.status < 300
-                ? 'The server response did not include a dataset ID.'
-                : `Upload failed (HTTP ${xhr.status}). ${responseText || 'The server returned no details.'}`)
-          );
+          if (xhr.status === 413) {
+            setErrorMsg('Upload failed (HTTP 413): File is too large for serverless functions (max 4.5 MB). Please upload a smaller file.');
+          } else if (xhr.status === 500 || xhr.status === 502 || xhr.status === 503) {
+            const serverMsg = response?.detail || xhr.responseText.trim().slice(0, 200);
+            setErrorMsg(`Server error (HTTP ${xhr.status}): ${serverMsg || 'Backend encountered an unexpected error.'}`);
+          } else {
+            const responseText = xhr.responseText.trim().slice(0, 300);
+            setErrorMsg(
+              response?.detail ||
+                (xhr.status >= 200 && xhr.status < 300
+                  ? 'The server response did not include a dataset ID.'
+                  : `Upload failed (HTTP ${xhr.status}). ${responseText || 'The server returned no details.'}`)
+            );
+          }
         }
       };
 
       xhr.onerror = () => {
         setStatus('error');
-        setErrorMsg('Network error occurred.');
+        setErrorMsg('Network error occurred. Please check your internet connection or backend status.');
       };
 
       xhr.send(formData);
@@ -126,7 +145,7 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
           type="file"
           id="file-upload"
           className="hidden"
-          accept=".csv,.xlsx"
+          accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
           onChange={handleChange}
         />
         
@@ -168,7 +187,7 @@ export function UploadDropzone({ onUploadSuccess }: UploadDropzoneProps) {
             </div>
             <div>
               <h3 className="font-semibold text-lg">Click or drag file to this area to upload</h3>
-              <p className="text-sm text-muted-foreground mt-2">Support for a single CSV or Excel upload.</p>
+              <p className="text-sm text-muted-foreground mt-2">Support for CSV or Excel files (up to 4.5 MB for serverless).</p>
             </div>
           </label>
         )}

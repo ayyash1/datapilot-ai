@@ -33,7 +33,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-36 border-b border-border/40">
+    <section className="relative overflow-hidden pt-8 pb-12 lg:pt-12 lg:pb-16 border-b border-border/40">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background to-background pointer-events-none" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-40 pointer-events-none" />
@@ -84,7 +84,7 @@ export function Hero() {
           </div>
 
           {/* Right Column - Product Preview */}
-          <div className="relative w-full aspect-[4/3] sm:aspect-auto sm:h-[500px] lg:h-[600px] animate-fade-in flex items-center justify-center lg:justify-end perspective-1000 mt-8 lg:mt-0" style={{ animationDelay: '500ms', animationFillMode: 'both' }}>
+          <div className="relative w-full aspect-[4/3] sm:aspect-auto sm:h-[400px] lg:h-[480px] animate-fade-in flex items-center justify-center lg:justify-end perspective-1000 mt-8 lg:mt-0" style={{ animationDelay: '500ms', animationFillMode: 'both' }}>
             <div 
               className="relative w-full max-w-[340px] sm:max-w-[420px] transition-transform duration-300 ease-out"
               style={{ transform: `translate(${mousePos.x * -10}px, ${mousePos.y * -10}px)` }}
